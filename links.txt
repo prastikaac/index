@@ -1,0 +1,10 @@
+1: https://www.iswori.com.np
+2: https://www.iswori.com.np/p/sitemap.html
+3: https://www.iswori.com.np/p/disclaimer.html
+4: https://www.iswori.com.np/p/privacy-policy.html
+5: https://www.iswori.com.np/p/class-11-english.html
+6: https://www.iswori.com.np/p/class-11-nepali.html
+7: https://www.iswori.com.np/p/class-11-physics.html
+8: https://www.iswori.com.np/p/class-11-chemistry.html
+9: https://www.iswori.com.np/p/class-11-math.html
+10: https://www.iswori.com.np/p/class-11-biology.html
