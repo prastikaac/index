@@ -93,13 +93,8 @@ class-12-model-questions : Indexed
 class-11-model-questions :
 class-12-science :
 class-12-exam-center :
-nanglo-photo-contest : Indexed
 nayabazar-pitch :
-shankhuwasabha-plane-crash :
-pokhara-plane-crash :
 edv-check :
-nepal-vs-uae :
-
 
 ---------------------------------------------------------
 ---------------------------------------------------------
