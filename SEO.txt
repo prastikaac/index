@@ -1,12 +1,17 @@
-Canonical URL:
-https://prasiddhaacharya.com.np
-SEO title: 
-Prasiddha Acharya | News (60 words)
-SEO description: (160 words)
-Iswori Education Provides SEE, Class 11, NEB Class 12 Exercise, Question Ans, Latest Notes 2080. Chemistry, Physics, Nepali, English, Math, Biology.
+1. SEO title (60 words) : 
+Prasiddha Acharya | News 
+
+2. SEO description: (160 words) :
 An online platform where you get NEB notes along with model questions of Class 10, 11 12, authentic News about NEB, National & International Incident & many more...
-SEO keywords:
-Iswori Education, , Keyword_1, Keyword_2, Keyword_3 
+
+3. SEO keywords:
+How to check class 12 result, NEB class 12 result, class 12 result 2080, SLC, result check, class 12 result, neb 12 result 2080 check, neb result of class 12, neb 12 class result, 2079 12 neb result 2079, neb 12 result 2079 check,neb class 12 exam result 2080 management faculty,neb class 12 exam result 2080 kathmandu faculty,neb class 12 exam result 2080 science faculty,neb result of class 12 2080,neb class 12 result 2080 update,neb result 2080 class 12 how to check,how do i check my neb result 2080 class 12,neb class 12 exam result 2080 commerce, neb class 12 exam result 2080 education faculty
+
+4. div :
+<body mainIn blogMn mnBr 
+
+5. Link with keywords :
+Class 12 Result refers to : https://prasiddhaacharya.com.np/neb/class-12-result-2080
 
 
 
