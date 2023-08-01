@@ -28,8 +28,8 @@ Off Page SEO
 I. Backlinks
 
   1. Wikipedia
-  Broken link checker : https://www.webfx.com/tools/wikigrabber
-2
+   - Dead link checker : https://www.webfx.com/tools/wikigrabber
+
 --------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------
 
