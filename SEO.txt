@@ -30,6 +30,9 @@ I. Backlinks
   1. Wikipedia
    - Dead link checker : https://www.webfx.com/tools/wikigrabber
 
+  2. Quora
+   - Answer the question and put your backlink for that answer
+
 --------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------
 
