@@ -1,5 +1,5 @@
 
-Remaining : Social Studies, Economics, Marketing, Business Math, Business Studies
+Remaining : Social Studies, Marketing, Business Math 
 
 Class 10 Subjects :
 1. English 
@@ -63,31 +63,3 @@ Education Subjects :
 4. Education
 5. Child Development
 6. Health
-
-
-
- <tr>
-                                    <td>Basic concept of economics  <br> & allocation of resources</td>
-                                    <td><a href="" target="_main">&nbsp; View / Download</a></td>
-                                  </tr>
-                                  <tr>
-                                    <td>	Micro economics
-                                    </td>
-                                    <td><a href="" target="_main">&nbsp; View / Download</a></td>
-                                  </tr>
-                                  <tr>
-                                    <td>	Macro economics</td>
-                                    <td><a href="" target="_main">&nbsp; View / Download</a></td>
-                                  </tr>
-                                  <tr>
-                                    <td>Development economics</td>
-                                    <td><a href="" target="_main">&nbsp; View / Download</a></td>
-                                  </tr>
-                                  <tr>
-                                    <td>Economy of Nepal </td>
-                                    <td><a href="" target="_main">&nbsp; View / Download</a></td>
-                                  </tr>
-                                  <tr>
-                                    <td>Quantitative Techniques</td>
-                                    <td><a href="" target="_main">&nbsp; View / Download</a></td>
-                                  </tr>
