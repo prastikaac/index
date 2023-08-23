@@ -64,3 +64,30 @@ Education Subjects :
 5. Child Development
 6. Health
 
+
+
+ <tr>
+                                    <td>Basic concept of economics  <br> & allocation of resources</td>
+                                    <td><a href="" target="_main">&nbsp; View / Download</a></td>
+                                  </tr>
+                                  <tr>
+                                    <td>	Micro economics
+                                    </td>
+                                    <td><a href="" target="_main">&nbsp; View / Download</a></td>
+                                  </tr>
+                                  <tr>
+                                    <td>	Macro economics</td>
+                                    <td><a href="" target="_main">&nbsp; View / Download</a></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Development economics</td>
+                                    <td><a href="" target="_main">&nbsp; View / Download</a></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Economy of Nepal </td>
+                                    <td><a href="" target="_main">&nbsp; View / Download</a></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Quantitative Techniques</td>
+                                    <td><a href="" target="_main">&nbsp; View / Download</a></td>
+                                  </tr>
