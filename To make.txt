@@ -1,3 +1,24 @@
+class-10-model-questions
+class-11-model-questions
+class-12-model-questions
+Nayabazar pitch
+EDV
+
+Thumb :
+class-10-model-questions
+Biology : 11,12
+Math Chapter List : 11,12
+Social Studies : 11,12
+Accountancy : 11,12
+Economics : 11,12
+Marketing : 11,12
+Business Math : 11,12
+Business Studies : 11,12
+
+
+--------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------
+
 
 class-12-model-questions : Indexed
 class-11-model-questions :
