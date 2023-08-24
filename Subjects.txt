@@ -1,6 +1,4 @@
 
-Remaining : 
-
 Class 10 Subjects :
 1. English 
 2. Nepali
@@ -50,16 +48,3 @@ Management Subjects :
 
 ( Economics vs Marketing)
 ( Computer Science vs Business Studies )
-
-
-
------------------------------------------------------------
------------------------------------------------------------
-
-Education Subjects :
-1. English 
-2. Nepali
-3. Social Studies 
-4. Education
-5. Child Development
-6. Health
