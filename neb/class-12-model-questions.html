@@ -10252,7 +10252,7 @@
                                   <div class="button-row">
                                     <a class="button ln" href="https://drive.google.com/file/d/1zydd_ig4TCIjhDMDtwPCubb14GXJQUvG/view"
                                       target="_main">View</a>
-                                    <a class="button download-btn" href="#"><i class="icon dl"></i>Download</a>
+                                    <a class="button download-btn" href=""><i class="icon dl"></i>Download</a>
                                   </div>
                                   <div class="countdown"></div>
                                   <div class="pleaseWait-text">Please wait..</div>
@@ -10371,6 +10371,7 @@
                                         // Create a new anchor element to trigger the download
                                         const anchor = document.createElement("a");
                                         anchor.href = download_href;
+                                        anchor.download = "filename"; 
                                         document.body.appendChild(anchor);
 
                                         // Simulate a click on the anchor element
