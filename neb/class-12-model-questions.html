@@ -10260,7 +10260,7 @@
                                     Download will begin shortly, if not then <a href="" class="manualDownload-link">click here.</a>
                                   </div>
                                 </div>
-                              
+                                
                                 <style>
                                   .download-container {
                                     position: relative;
@@ -10270,39 +10270,39 @@
                                     flex-direction: column;
                                     padding: 20px;
                                   }
-                              
+                                
                                   .button-row {
                                     display: flex;
                                     gap: 10px;
                                     margin-bottom: 20px;
                                   }
-                              
+                                
                                   .countdown {
                                     font-size: 1.1em;
                                     font-weight: 600;
                                     margin-bottom: 20px;
-                              
+                                
                                   }
-                              
+                                
                                   .countdown span {
                                     font-size: 1.2em;
                                     font-weight: 800;
                                     color: var(--darkU);
                                   }
-                              
+                                
                                   .pleaseWait-text,
                                   .manualDownload-text {
                                     font-size: 1em;
                                     font-weight: 600;
                                     display: none;
                                   }
-                              
+                                
                                   .manualDownload-text a {
                                     color: var(--darkU);
                                     font-weight: 800;
                                     text-decoration: none;
                                   }
-                              
+                                
                                   @media (max-width: 768px) {
                                     .download-container {
                                       position: relative;
@@ -10312,33 +10312,33 @@
                                       flex-direction: column;
                                       padding: 20px;
                                     }
-                              
+                                
                                     .button-row {
                                       display: flex;
                                       gap: 10px;
                                       margin-bottom: 20px;
                                     }
-                              
+                                
                                     .countdown {
                                       font-size: 17px;
                                       font-weight: 600;
                                       margin-bottom: 20px;
-                              
+                                
                                     }
-                              
+                                
                                     .countdown span {
                                       font-size: 18px;
                                       font-weight: 800;
                                       color: var(--darkU);
                                     }
-                              
+                                
                                     .pleaseWait-text,
                                     .manualDownload-text {
                                       font-size: 14px;
                                       font-weight: 600;
                                       display: none;
                                     }
-                              
+                                
                                     .manualDownload-text a {
                                       color: var(--darkU);
                                       font-weight: 800;
@@ -10346,114 +10346,114 @@
                                     }
                                   }
                                 </style>
-                              
+                                
                                 <script type="text/javascript">
-    const downloadBtn = document.querySelector(".download-btn");
-    const countdown = document.querySelector(".countdown");
-    const pleaseWaitText = document.querySelector(".pleaseWait-text");
-    const manualDownloadText = document.querySelector(".manualDownload-text");
-    const manualDownloadLink = document.querySelector(".manualDownload-link");
-    var timeLeft = 10;
+                                  const downloadBtn = document.querySelector(".download-btn");
+                                  const countdown = document.querySelector(".countdown");
+                                  const pleaseWaitText = document.querySelector(".pleaseWait-text");
+                                  const manualDownloadText = document.querySelector(".manualDownload-text");
+                                  const manualDownloadLink = document.querySelector(".manualDownload-link");
+                                  var timeLeft = 10;
 
-    downloadBtn.addEventListener("click", () => {
-      downloadBtn.style.display = "none";
-      countdown.innerHTML = "Download will begin automatically in <span>" + timeLeft + "</span> seconds."; //for quick start of countdown
+                                  downloadBtn.addEventListener("click", () => {
+                                    downloadBtn.style.display = "none";
+                                    countdown.innerHTML = "Download will begin automatically in <span>" + timeLeft + "</span> seconds."; //for quick start of countdown
 
-      var downloadTimer = setInterval(function timeCount(){
-        timeLeft -= 1;
-        countdown.innerHTML = "Download will begin automatically in <span>" + timeLeft + "</span> seconds.";
+                                    var downloadTimer = setInterval(function timeCount() {
+                                      timeLeft -= 1;
+                                      countdown.innerHTML = "Download will begin automatically in <span>" + timeLeft + "</span> seconds.";
 
-        if(timeLeft <= 0){
-          clearInterval(downloadTimer);
-          pleaseWaitText.style.display = "block";
-          let download_href = "https://drive.google.com/u/0/uc?id=1FNYywKQnXY_r8qU_JrFymsDgocceqDDw&export=download"; //enter the downloadable file link URL here
-          window.location.href = download_href;
-          manualDownloadLink.href = download_href;
+                                      if (timeLeft <= 0) {
+                                        clearInterval(downloadTimer);
+                                        pleaseWaitText.style.display = "block";
+                                        let download_href = "https://drive.google.com/file/d/1zydd_ig4TCIjhDMDtwPCubb14GXJQUvG"; //enter the downloadable file link URL here
+                                        window.location.href = download_href;
+                                        manualDownloadLink.href = download_href;
 
-          setTimeout(() => {
-            pleaseWaitText.style.display = "none";
-            manualDownloadText.style.display = "block";
-          }, 4000);
-        }
-      }, 1000);
-    });
-    </script>
-
-                                  
-                                  
-                                  <h3>Subjects</h3>
-                              Compulsory Nepali, Compulsory English, Compulsory Social Studies and Life Skills, Compulsory Mathematics, Physics,
-                              Accounting, Rural Development, Nepalese Legal System, Instructional Pedagogy and Evaluation, Biology, Education and
-                              Development, Legal Drafting, Sociology, Business Studies, Population Studies, Chemistry, Economics, Tourism and
-                              Mountaineering Studies, Marketing, Civil and Criminal Law and Justice, Optional Nepali, Optional English, Business
-                              Mathematics, Environment Science, General Law, Finance, Computer Science, Hotel Management, Mass Communication, Health
-                              and Physical Education & many more...
-                              
-                              
-                              <h3>About</h3>
-                              National Examination Board (NEB) has released the <a
-                                href="https://prasiddhaacharya.com.np/neb/class-12-model-questions">Model Questions</a> for Class 12 examinations for
-                              the new academic year 2080. Students can now view and download model question papers for all subjects to prepare for
-                              their final board exams. <br> <br> The <a href="https://prasiddhaacharya.com.np/neb/class-12-model-questions">Model
-                                Questions</a> papers released by NEB serve as a good reference for students to understand the exam pattern, weightage
-                              of questions, marking scheme and difficulty level of questions. To help students prepare for the exams, the National
-                              Examination Board has made available sample questions from the Class 12 examination. According to the board, the
-                              examination will be conducted in accordance with the model question papers. <br> <br>
-                              
-                              <a href="https://prasiddhaacharya.com.np/neb/class-12-model-questions">Class 12 Model
-                                Questions</a> plays a vital role in the academic preparation of students for their
-                              higher secondary education. These model questions are designed to provide students with a
-                              clear understanding of the examination pattern, question formats, and level of complexity
-                              they can expect in their actual exams. Created by experienced educators and subject matter
-                              experts, the model questions cover a wide range of subjects and topics, ensuring
-                              comprehensive coverage of the curriculum. By attempting these model questions, students
-                              can gauge their knowledge and comprehension, identify areas that require further
-                              improvement, and enhance their problem-solving abilities.
-                              <br> <br>
-                              
-                              Via our <a href="https://prasiddhaacharya.com.np/neb/class-12-model-questions">Class 12
-                                Model Questions</a>, students can explore and access a plethora of model questions for
-                              different subjects of class 12. The model questions are available in downloadable PDF
-                              format, allowing students to study offline at their convenience. Moreover, the platform's
-                              responsive design ensures seamless access from various devices, making learning on-the-go
-                              hassle-free.
-                              <br> <br>
-                              One of the worthy features of our model questions is the inclusion of detailed solutions
-                              and explanations. Students can verify their answers and learn the correct approach to
-                              solving problems, fostering a deeper understanding of the subject matter. Additionally, we
-                              regularly update our model question database, staying up-to-date with the latest syllabus
-                              changes and examination trends, ensuring students have access to the most relevant and
-                              current study materials which serves as an indispensable resource for students' academic
-                              growth. Through these model questions, students can gain confidence, improve their subject
-                              knowledge, and prepare effectively for their higher secondary examinations, paving the way
-                              for a successful academic journey.
-                              
-                              <div style=" text-align: center !important;">
-                                <a href="https://prasiddhaacharya.com.np/neb/class-12-model-questions" target="_main" style="padding: 10px;"
-                                  class="button">Check now</a>
-                              </div>
-                              
-                              <h3>Why our Notes ?</h3>
-                              At <a href="https://prasiddhaacharya.com.np">prasiddhaacharya.com.np</a>, we take pride in offering a comprehensive and
-                              enriching
-                              collection of notes, exercises on a wide array of subjects, designed to cater to the
-                              diverse learning needs of students and professionals. Our notes stand out due to their
-                              exceptional features, making them an invaluable resource for anyone seeking to enhance
-                              their knowledge and excel in their respective fields.
-                              
-                              One of the key features of our notes, exercises is the meticulous curation process
-                              undertaken by our team of experienced educators and subject matter experts. Each set of
-                              notes is thoughtfully crafted to ensure accuracy, relevance, and adherence to the latest
-                              curriculum standards. We are committed to providing high-quality content that covers the
-                              essential concepts, theories, and practical applications, empowering learners to build a
-                              strong foundation in the subject matter.
-                              <br> <br>
-                              Our notes are presented in a user-friendly format, making them accessible to learners of
-                              all levels. Whether you are a beginner looking for fundamental insights or an advanced
-                              learner seeking in-depth analysis, our notes cater to your specific requirements. Clear
-                              and concise language, coupled with illustrative examples, makes the learning experience
-                              engaging and effective.
-                              <br> <br>
+                                        setTimeout(() => {
+                                          pleaseWaitText.style.display = "none";
+                                          manualDownloadText.style.display = "block";
+                                        }, 4000);
+                                      }
+                                    }, 1000);
+                                  });
+                                </script>
+                                
+                                
+                                
+                                <h3>Subjects</h3>
+                                Compulsory Nepali, Compulsory English, Compulsory Social Studies and Life Skills, Compulsory Mathematics, Physics,
+                                Accounting, Rural Development, Nepalese Legal System, Instructional Pedagogy and Evaluation, Biology, Education and
+                                Development, Legal Drafting, Sociology, Business Studies, Population Studies, Chemistry, Economics, Tourism and
+                                Mountaineering Studies, Marketing, Civil and Criminal Law and Justice, Optional Nepali, Optional English, Business
+                                Mathematics, Environment Science, General Law, Finance, Computer Science, Hotel Management, Mass Communication, Health
+                                and Physical Education & many more...
+                                
+                                
+                                <h3>About</h3>
+                                National Examination Board (NEB) has released the <a
+                                  href="https://prasiddhaacharya.com.np/neb/class-12-model-questions">Model Questions</a> for Class 12 examinations for
+                                the new academic year 2080. Students can now view and download model question papers for all subjects to prepare for
+                                their final board exams. <br> <br> The <a href="https://prasiddhaacharya.com.np/neb/class-12-model-questions">Model
+                                  Questions</a> papers released by NEB serve as a good reference for students to understand the exam pattern, weightage
+                                of questions, marking scheme and difficulty level of questions. To help students prepare for the exams, the National
+                                Examination Board has made available sample questions from the Class 12 examination. According to the board, the
+                                examination will be conducted in accordance with the model question papers. <br> <br>
+                                
+                                <a href="https://prasiddhaacharya.com.np/neb/class-12-model-questions">Class 12 Model
+                                  Questions</a> plays a vital role in the academic preparation of students for their
+                                higher secondary education. These model questions are designed to provide students with a
+                                clear understanding of the examination pattern, question formats, and level of complexity
+                                they can expect in their actual exams. Created by experienced educators and subject matter
+                                experts, the model questions cover a wide range of subjects and topics, ensuring
+                                comprehensive coverage of the curriculum. By attempting these model questions, students
+                                can gauge their knowledge and comprehension, identify areas that require further
+                                improvement, and enhance their problem-solving abilities.
+                                <br> <br>
+                                
+                                Via our <a href="https://prasiddhaacharya.com.np/neb/class-12-model-questions">Class 12
+                                  Model Questions</a>, students can explore and access a plethora of model questions for
+                                different subjects of class 12. The model questions are available in downloadable PDF
+                                format, allowing students to study offline at their convenience. Moreover, the platform's
+                                responsive design ensures seamless access from various devices, making learning on-the-go
+                                hassle-free.
+                                <br> <br>
+                                One of the worthy features of our model questions is the inclusion of detailed solutions
+                                and explanations. Students can verify their answers and learn the correct approach to
+                                solving problems, fostering a deeper understanding of the subject matter. Additionally, we
+                                regularly update our model question database, staying up-to-date with the latest syllabus
+                                changes and examination trends, ensuring students have access to the most relevant and
+                                current study materials which serves as an indispensable resource for students' academic
+                                growth. Through these model questions, students can gain confidence, improve their subject
+                                knowledge, and prepare effectively for their higher secondary examinations, paving the way
+                                for a successful academic journey.
+                                
+                                <div style=" text-align: center !important;">
+                                  <a href="https://prasiddhaacharya.com.np/neb/class-12-model-questions" target="_main" style="padding: 10px;"
+                                    class="button">Check now</a>
+                                </div>
+                                
+                                <h3>Why our Notes ?</h3>
+                                At <a href="https://prasiddhaacharya.com.np">prasiddhaacharya.com.np</a>, we take pride in offering a comprehensive and
+                                enriching
+                                collection of notes, exercises on a wide array of subjects, designed to cater to the
+                                diverse learning needs of students and professionals. Our notes stand out due to their
+                                exceptional features, making them an invaluable resource for anyone seeking to enhance
+                                their knowledge and excel in their respective fields.
+                                
+                                One of the key features of our notes, exercises is the meticulous curation process
+                                undertaken by our team of experienced educators and subject matter experts. Each set of
+                                notes is thoughtfully crafted to ensure accuracy, relevance, and adherence to the latest
+                                curriculum standards. We are committed to providing high-quality content that covers the
+                                essential concepts, theories, and practical applications, empowering learners to build a
+                                strong foundation in the subject matter.
+                                <br> <br>
+                                Our notes are presented in a user-friendly format, making them accessible to learners of
+                                all levels. Whether you are a beginner looking for fundamental insights or an advanced
+                                learner seeking in-depth analysis, our notes cater to your specific requirements. Clear
+                                and concise language, coupled with illustrative examples, makes the learning experience
+                                engaging and effective.
+                                <br> <br>
                               One of the standout features of our notes, exercises is their versatility. We offer notes
                               on a wide range of subjects, including core academic disciplines, language and literature,
                               science and technology, business and economics, and much more. This extensive selection
