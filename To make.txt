@@ -1,28 +1,13 @@
 Translator
 
-Thumb :
-
-Social Studies : 11,12
-Economics : 11,12
-Marketing : 11,12
-Business Math : 11,12
-Business Studies : 11,12
-
-
 --------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------
 
-
-class-12-model-questions : Indexed
-class-11-model-questions :
-class-12-science :
-class-11-science :
-class-12-exam-center :
-class-12-result-2080 :
-nayabazar-pitch : Done
-edv-check : Done
-
-
+https://prasiddhaacharya.com.np
+about-us :
+contact-us :
+disclaimer :
+privacy-policy :
 
 --------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------
@@ -30,6 +15,7 @@ edv-check : Done
 Categories 
 
 neb :
+class-10 :
 class-11 :
 class-11-management : 
 class-11-science :
@@ -39,25 +25,12 @@ class-12-science :
 national :
 internaional :
 others :  
+nayabazar-pitch :
+edv-check :
 
+--------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------
 
-
----------------------------------------------------------
----------------------------------------------------------
-
-class-12-english : Indexed
-class-12-math : Indexed 
-class-12-biology : Indexed 
-class-12-computer : Indexed 
-class-12-account : Indexed 
-
-class-12-nepali : Not Indexed
-class-12-physics : Not Indexed
-class-12-chemistry : Not Indexed
-
-
---------------------------------------------------------- 
----------------------------------------------------------
 
 class-10-science : Indexed 
 class-10-social : Indexed 
@@ -65,18 +38,59 @@ class-10-account : Indexed
 class-10-computer : Indexed
 class-10-economics : Indexed 
 class-10-optional-math : Indexed 
-
 class-10-english : Not Indexed
 class-10-nepali : Not Indexed
 class-10-math : Not Indexed
+class-10-model-questions : 
+class-10-result-2080 :
+class-10-syllabus :
 
-
-class-11-nepali : Indexed P
-class-11-chemistry : Indexed 
-class-11-computer : Indexed
+--------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------
 
 class-11-english : Not Indexed P
+class-11-summary : Not Indexed P
+class-11-nepali : Indexed P
+class-11-social :
+class-11-chemistry : Indexed 
 class-11-physics : Not Indexed P
-class-11-account : Not Indexed P
 class-11-math : Not Indexed P
 class-11-biology : Not Indexed P
+class-11-computer : Indexed
+class-11-account : Not Indexed P
+class-11-economics :
+class-11-marketing :
+class-11-business-studies :
+class-11-business-math :
+class-11-model-questions
+class-11-syllabus :
+
+--------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------
+
+class-12-english : Indexed
+class-12-math : Indexed 
+class-12-biology : Indexed 
+class-12-computer : Indexed 
+class-12-account : Indexed 
+class-12-exam-result-2080 : Indexed
+class-12-summary : Indexed
+class-12-model-questions : Indexed
+class-12-syllabus : Indexed 
+class-12-exam-center : Indexed
+
+class-12-nepali : Not Indexed 
+class-12-social : Not Indexed
+class-12-chemistry : Indexed 
+class-12-physics : Not Indexed 
+class-12-economics : Not Indexed
+class-12-marketing : Not Indexed
+class-12-business-studies : Not Indexed
+class-12-business-math : Not Indexed
+
+--------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------
+
+Total Links : 64 
+    Indexed : 20
+Not Indexed : 21
