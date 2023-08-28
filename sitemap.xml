@@ -1,208 +1,332 @@
 <?xml version="1.0" encoding="UTF-8"?>
-		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>1.0</priority>
+  <loc>https://prasiddhaacharya.com.np/</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-10-english</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/disclaimer</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-10-nepali</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/privacy-policy</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-10-math</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/neb/class-10-english</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-10-science</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/neb/class-10-nepali</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-10-social</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/neb/class-10-math</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-10-account</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/neb/class-10-science</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-10-computer</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/neb/class-10-social</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-10-economics</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/neb/class-10-account</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-10-optional-math</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/neb/class-10-computer</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-11-english</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/neb/class-10-economics</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-11-nepali</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/neb/class-10-optional-math</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-11-physics</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/neb/class-11-english</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-11-chemistry</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/neb/class-11-nepali</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-11-math</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/neb/class-11-physics</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-11-biology</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/neb/class-11-chemistry</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-11-computer</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/neb/class-11-math</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-12-english</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/neb/class-11-biology</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-12-nepali</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/neb/class-11-computer</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-12-physics</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/neb/class-11-account</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-12-chemistry</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/neb/class-12-english</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-12-math</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/neb/class-12-nepali</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-12-biology</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/neb/class-12-physics</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-12-computer</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/neb/class-12-chemistry</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-12-account</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/neb/class-12-math</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/about-us</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>1.0</priority>
+  <loc>https://prasiddhaacharya.com.np/neb/class-12-biology</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/contact-us</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>1.0</priority>
+  <loc>https://prasiddhaacharya.com.np/neb/class-12-computer</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-11</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/neb/class-12-account</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-11-management</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/neb/</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-11-science</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/national/</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-12</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/international/</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-12-management</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/others/</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-12-science</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/about-us</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-10-result-2080</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/contact-us</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-11-model-questions</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/neb/class-10</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-10</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/neb/class-11</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-12-exam-center</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/neb/class-11-management</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-12-result-2080</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/neb/class-11-science</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-12-model-questions</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/neb/class-12</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-12-syllabus</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/neb/class-12-management</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.prasiddhaacharya.com.np/neb/class-12-summary</loc>
-	<lastmod>2023-06-23T15:58:20+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://prasiddhaacharya.com.np/neb/class-12-science</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
+<url>
+  <loc>https://prasiddhaacharya.com.np/neb/class-12-exam-result-2080</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://prasiddhaacharya.com.np/neb/class-10-result-2080</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://prasiddhaacharya.com.np/neb/class-10-model-questions</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://prasiddhaacharya.com.np/neb/class-10-syllabus</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://prasiddhaacharya.com.np/neb/class-11-model-questions</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://prasiddhaacharya.com.np/neb/class-11-syllabus</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://prasiddhaacharya.com.np/neb/class-11-summary</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://prasiddhaacharya.com.np/neb/class-11-social</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://prasiddhaacharya.com.np/neb/class-11-economics</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://prasiddhaacharya.com.np/neb/class-11-marketing</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://prasiddhaacharya.com.np/neb/class-11-business-studies</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://prasiddhaacharya.com.np/neb/class-11-business-math</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://prasiddhaacharya.com.np/neb/class-12-exam-center</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://prasiddhaacharya.com.np/neb/class-12-model-questions</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://prasiddhaacharya.com.np/neb/class-12-syllabus</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://prasiddhaacharya.com.np/neb/class-12-summary</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://prasiddhaacharya.com.np/neb/class-12-social</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://prasiddhaacharya.com.np/neb/class-12-economics</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://prasiddhaacharya.com.np/neb/class-12-marketing</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://prasiddhaacharya.com.np/neb/class-12-business-studies</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://prasiddhaacharya.com.np/neb/class-12-business-math</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://prasiddhaacharya.com.np/national/nayabazar-pitch</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://prasiddhaacharya.com.np/international/edv-check</loc>
+  <lastmod>2023-08-28T13:15:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
 </urlset>
