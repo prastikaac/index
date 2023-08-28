@@ -1,11 +1,8 @@
 Translator
 
 Thumb :
-class-10-model-questions
-Biology : 11,12
-Math Chapter List : 11,12
+
 Social Studies : 11,12
-Accountancy : 11,12
 Economics : 11,12
 Marketing : 11,12
 Business Math : 11,12
