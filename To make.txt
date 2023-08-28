@@ -1,7 +1,3 @@
-class-12-summary
-class-12-syllabus
-class-12-exam-center
-
 Translator
 
 Thumb :
