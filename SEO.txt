@@ -36,6 +36,16 @@ I. Backlinks
 --------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------
 
+Fast Page Indexing :
+
+1. Update sitemap with new url and submit it to the google using :
+https://google.com/ping?sitemap=https://prasiddhaacharya.com.np/sitemap.xml
+
+2. Link the page from a previously indexed pages
+
+--------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------
+
 How to check Class 12 Result 2080 | Class 12 Result Published
 
 NEB Class 12 (SLC) result 2080 is published now. How to check class 12 Result 2080 ? You can check it from the official websites www.neb.gov.np & neb.ntc.net.np with your marksheet and also from SMS and IVR call with 1600 
