@@ -23,15 +23,13 @@ https://prasiddhaacharya.com.np/neb/class-12 :
 https://prasiddhaacharya.com.np/neb/class-12-management :  
 https://prasiddhaacharya.com.np/neb/class-12-science :
 https://prasiddhaacharya.com.np/national :
-
 https://prasiddhaacharya.com.np/international :
 https://prasiddhaacharya.com.np/others :  
 https://prasiddhaacharya.com.np/national/nayabazar-pitch :
-https://prasiddhaacharya.com.np/internaional/edv-check :
+https://prasiddhaacharya.com.np/international/edv-check :
 
 --------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------
-
 
 https://prasiddhaacharya.com.np/neb/class-10-science : Indexed 
 https://prasiddhaacharya.com.np/neb/class-10-social : Indexed 
@@ -79,7 +77,6 @@ https://prasiddhaacharya.com.np/neb/class-12-summary : Indexed
 https://prasiddhaacharya.com.np/neb/class-12-model-questions : Indexed
 https://prasiddhaacharya.com.np/neb/class-12-syllabus : Indexed 
 https://prasiddhaacharya.com.np/neb/class-12-exam-center : Indexed
-
 https://prasiddhaacharya.com.np/neb/class-12-nepali : Not Indexed 
 https://prasiddhaacharya.com.np/neb/class-12-social : Not Indexed
 https://prasiddhaacharya.com.np/neb/class-12-chemistry : Indexed 
@@ -93,5 +90,5 @@ https://prasiddhaacharya.com.np/neb/class-12-business-math : Not Indexed
 --------------------------------------------------------------------------------------------------------------------------
 
 Total Links : 64 
-    Indexed : 20
+    Indexed : 43
 Not Indexed : 21
