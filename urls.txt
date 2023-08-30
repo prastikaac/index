@@ -1,5 +1,15 @@
 Translator
 
+Search mobMn section slide
+Paste the code above the :
+ 	     </div>
+          </aside>
+        </div>
+
+
+ <div class="sideSticky section" id="side-sticky"><div class="widget HTML" data-version="2" id="HTML95">
+<div class="adB h240" data-text="Ads go here (Sticky Ad - Desktop only)"></div>
+</div></div>
 --------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------
 
