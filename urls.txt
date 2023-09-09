@@ -102,5 +102,5 @@ https://prasiddhaacharya.com.np/neb/class-12-business-math : Not Indexed
 --------------------------------------------------------------------------------------------------------------------------
 
 Total Links : 65
-    Indexed : 43
-Not Indexed : 22
+    Indexed : 65
+Not Indexed : 0
