@@ -41,7 +41,9 @@ Fast Page Indexing :
 1. Update sitemap with new url and submit it to the google using :
 https://google.com/ping?sitemap=https://prasiddhaacharya.com.np/sitemap.xml
 
-2. Link the page from a previously indexed pages
+2. Remove Sitemap & Put it again from Search Console
+
+3. Link the page from a previously indexed pages
 
 --------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------
