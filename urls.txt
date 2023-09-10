@@ -39,7 +39,8 @@ https://prasiddhaacharya.com.np/others :
 https://prasiddhaacharya.com.np/national/nayabazar-pitch :
 https://prasiddhaacharya.com.np/international/edv-check :
 https://prasiddhaacharya.com.np/international/nepal-vs-pakistan-asia-cup :
-
+https://prasiddhaacharya.com.np/international/india-vs-pakistan-asia-cup
+https://prasiddhaacharya.com.np/international/morocco-earthquake
 --------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------
 
@@ -101,6 +102,6 @@ https://prasiddhaacharya.com.np/neb/class-12-business-math : Not Indexed
 --------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------
 
-Total Links : 65
-    Indexed : 65
+Total Links : 67
+    Indexed : 67
 Not Indexed : 0
