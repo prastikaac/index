@@ -1,11 +1,51 @@
+Code :
+
+<div id="imageGallery" class="zmImg"></div>
+                                    <script>
+                                      // List of filenames
+                                      const filenames = [
+                                        "347844435_1260029217939628_801178576240366677_n.jpg",
+					 // List of filenames
+                                      ];
+
+                                      // Base URL for the images
+                                      const baseUrl = "https://prasiddhaacharya.com.np/images/class-11-computer/";
+
+                                      // Reference to the image gallery container
+                                      const imageGallery = document.getElementById("imageGallery");
+
+                                      // Generate and insert HTML for each image
+                                      filenames.forEach(filename => {
+                                        const imageUrl = baseUrl + filename;
+                                        const imgElement = document.createElement("img");
+                                        imgElement.src = imageUrl;
+                                        imgElement.alt = "NEB Class 11 Computer Science All Notes Pdf Nepal Grade 11 Computer Science Notes";
+                                        imgElement.width = 1280;
+                                        imgElement.height = 720;
+                                        imgElement.onclick = function () {
+                                          return false;
+                                        };
+
+                                        const divElement = document.createElement("div");
+                                        divElement.className = "zmImg";
+                                        divElement.appendChild(imgElement);
+
+                                        imageGallery.appendChild(divElement);
+                                      });
+                                    </script>
+
+-----------------------------------------------------
+
+
+
 
 	      Class 11 Computer Notes 
 -----------------------------------------------------
 
- <div class="zmImg">
-                             <img alt="NEB Class 11 Computer Science All Notes Pdf Nepal Grade 11 Computer Science Notes" src="https://prasiddhaacharya.com.np/images/347844435_1260029217939628_801178576240366677_n.jpg
-" width="1280" height="720" onclick="return false">
+   <div class="zmImg">
+                             <img alt="NEB Class 11 Computer Science All Notes Pdf Nepal Grade 11 Computer Science Notes" src="https://prasiddhaacharya.com.np/images/class-11-computer/347844435_1260029217939628_801178576240366677_n.jpg" width="1280" height="720" onclick="return false">
                              </div>
+
 
 
 
