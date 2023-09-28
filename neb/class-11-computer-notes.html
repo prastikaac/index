@@ -10188,6 +10188,138 @@
                                 });
                               </script>
                               
+                              <div class="download-container">
+                                  <div class="button-row">
+                                    <a class="button ln" href="https://drive.google.com/file/d/1vQyB1NjBDWTeN6y85y97Y3Xuqm1Y40FQ/view?usp=sharing"
+                                      target="_main">View</a>
+                                    <a class="button download-btn" href="#"><i class="icon dl"></i>Download</a>
+                                  </div>
+                                  <div class="countdown"></div>
+                                  <div class="pleaseWait-text">Please wait..</div>
+                                  <div class="manualDownload-text">
+                                    Download will begin shortly, if not then <a href="https://drive.google.com/u/0/uc?id=1vQyB1NjBDWTeN6y85y97Y3Xuqm1Y40FQ&export=download" class="manualDownload-link">click here.</a>
+                                  </div>
+                                </div>
+                                
+                                <style>
+                                  .download-container {
+                                    position: relative;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    flex-direction: column;
+                                    padding: 20px;
+                                  }
+                                
+                                  .button-row {
+                                    display: flex;
+                                    gap: 10px;
+                                    margin-bottom: 20px;
+                                  }
+                                
+                                  .countdown {
+                                    font-size: 1.1em;
+                                    font-weight: 600;
+                                    margin-bottom: 20px;
+                                
+                                  }
+                                
+                                  .countdown span {
+                                    font-size: 1.1em;
+                                    font-weight: 800;
+                                    color: var(--darkU);
+                                  }
+                                
+                                  .pleaseWait-text,
+                                  .manualDownload-text {
+                                    font-size: 1em;
+                                    color: #e1235a;
+                                    font-weight: 600;
+                                    display: none;
+                                  }
+                                
+                                  .manualDownload-text a {
+                                    color: var(--darkU);
+                                    font-weight: 800;
+                                    text-decoration: none;
+                                  }
+                                
+                                  @media (max-width: 768px) {
+                                    .download-container {
+                                      position: relative;
+                                      display: flex;
+                                      justify-content: center;
+                                      align-items: center;
+                                      flex-direction: column;
+                                      padding: 20px;
+                                    }
+                                
+                                    .button-row {
+                                      display: flex;
+                                      gap: 10px;
+                                      margin-bottom: 20px;
+                                    }
+                                
+                                    .countdown {
+                                      font-size: 17px;
+                                      font-weight: 600;
+                                      margin-bottom: 20px;
+                                
+                                    }
+                                
+                                    .countdown span {
+                                      font-size: 18px;
+                                      font-weight: 800;
+                                      color: var(--darkU);
+                                    }
+                                
+                                    .pleaseWait-text,
+                                    .manualDownload-text {
+                                      font-size: 14px;
+                                      font-weight: 600;
+                                      display: none;
+                                    }
+                                
+                                    .manualDownload-text a {
+                                      color: var(--darkU);
+                                      font-weight: 800;
+                                      text-decoration: none;
+                                    }
+                                  }
+                                </style>
+                                
+                                <script type="text/javascript">
+                                  const downloadBtn = document.querySelector(".download-btn");
+                                  const countdown = document.querySelector(".countdown");
+                                  const pleaseWaitText = document.querySelector(".pleaseWait-text");
+                                  const manualDownloadText = document.querySelector(".manualDownload-text");
+                                  const manualDownloadLink = document.querySelector(".manualDownload-link");
+                                  var timeLeft = 10;
+
+                                  downloadBtn.addEventListener("click", () => {
+                                    downloadBtn.style.display = "none";
+                                    countdown.innerHTML = "Download will begin automatically in <span>" + timeLeft + "</span> seconds."; //for quick start of countdown
+
+                                    var downloadTimer = setInterval(function timeCount() {
+                                      timeLeft -= 1;
+                                      countdown.innerHTML = "Download will begin automatically in <span>" + timeLeft + "</span> seconds.";
+
+                                      if (timeLeft <= 0) {
+                                        clearInterval(downloadTimer);
+                                        pleaseWaitText.style.display = "block";
+                                        let download_href = "https://drive.google.com/u/0/uc?id=1vQyB1NjBDWTeN6y85y97Y3Xuqm1Y40FQ&export=download"; //enter the downloadable file link URL here
+                                        window.location.href = download_href;
+                                        manualDownloadLink.href = download_href;
+
+                                        setTimeout(() => {
+                                          pleaseWaitText.style.display = "none";
+                                          manualDownloadText.style.display = "block";
+                                        }, 4000);
+                                      }
+                                    }, 1000);
+                                  });
+                                </script>
+
 
                               <h3>About</h3>
                               Our computer notes offer a comprehensive and enriching learning experience for individuals seeking to expand their knowledge in the field of computer science. These notes stand out due to their exceptional features, making them an invaluable resource for anyone aiming to excel in this rapidly evolving domain. One of the key highlights of our computer notes is their meticulous curation process. Our team of experienced educators and subject matter experts meticulously crafts each set of notes, ensuring accuracy, relevance, and alignment with the latest advancements in technology. The notes cover a wide range of topics, from fundamental concepts to advanced programming languages, ensuring a well-rounded understanding of computer science principles.
