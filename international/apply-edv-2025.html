@@ -9170,7 +9170,41 @@
     <div class="indeterminate"></div>
   </div>
 
-
+  <div class="progress"></div>
+  <style>
+  .progress {
+    height: 2px;
+    width: 0%;
+    background-color:  #9303FA;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: progress 1s linear;
+  }
+  @keyframes progress {
+    to {
+      background-color: #9303FA;
+      width: 100%;
+    }
+  }
+  
+  :root * {
+    /* Pause the animation */
+    animation-play-state: paused;
+    /* Bind the animation to scroll */
+    animation-delay: calc(var(--scroll) * -1s);
+    /* These last 2 properites clean up overshoot weirdness */
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+  }
+  </style>
+  
+  <script>
+  window.addEventListener('scroll', () => {
+    document.body.style.setProperty('--scroll',window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+  }, false);
+  </script>
+  
 
   <div class="blog-admin" id="admCk"></div>
 
