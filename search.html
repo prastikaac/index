@@ -8815,69 +8815,7 @@
 
 
 
-                      <script>
-                        // Function to extract the search query parameter from the URL
-                        function getSearchQueryFromUrl() {
-                          var urlParams = new URLSearchParams(window.location.search);
-                          return urlParams.get('q');
-                        }
-
-                        window.onload = function () {
-                          // Get the search query from the URL
-                          var searchQuery = getSearchQueryFromUrl();
-
-                          // If a search query is present, populate the search input and perform the search
-                          if (searchQuery) {
-                            document.getElementById('searchInput').value = searchQuery;
-                            search();
-                          }
-                        };
-
-                        // Event listener for the Enter key
-                        document.getElementById('searchInput').addEventListener('keypress', function (event) {
-                          if (event.key === 'Enter') {
-                            search();
-                          }
-                        });
-
-                        function search() {
-                          var input = document.getElementById('searchInput').value.trim().toLowerCase();
-                          var posts = document.querySelectorAll('.post');
-                          var searchResults = document.getElementById('searchResults');
-                          searchResults.innerHTML = '';
-
-                          // Display the query name
-                          var queryHeading = document.getElementById('queryHeading');
-                          queryHeading.textContent = "Search :  " + input;
-
-                          var resultsFound = false;
-
-                          // Iterate over each post to check for matches
-                          posts.forEach(function (post) {
-                            var keywords = post.getAttribute('data-keywords').toLowerCase();
-                            if (keywords.includes(input)) {
-                              post.style.display = 'block';
-                              searchResults.appendChild(post.cloneNode(false));
-                              resultsFound = true;
-                            } else {
-                              post.style.display = 'none';
-                            }
-                          });
-
-                          // If no results found, display a message
-                          var noResultsMessage = document.getElementById('noResultsMessage');
-                          if (!resultsFound) {
-                            noResultsMessage.style.display = 'block';
-                          } else {
-                            noResultsMessage.style.display = 'none';
-                          }
-
-                          // Modify the URL with the search value
-                          var currentUrl = new URL(window.location.href);
-                          currentUrl.searchParams.set('q', input); // Set the query parameter to 'q'
-                          window.history.pushState({ path: currentUrl.href }, '', currentUrl.href);
-                        }
-                      </script>
+                     
 
                     </div>
 
@@ -9657,6 +9595,70 @@
         display: none;
       }
     </style>
+
+     <script>
+                        // Function to extract the search query parameter from the URL
+                        function getSearchQueryFromUrl() {
+                          var urlParams = new URLSearchParams(window.location.search);
+                          return urlParams.get('q');
+                        }
+
+                        window.onload = function () {
+                          // Get the search query from the URL
+                          var searchQuery = getSearchQueryFromUrl();
+
+                          // If a search query is present, populate the search input and perform the search
+                          if (searchQuery) {
+                            document.getElementById('searchInput').value = searchQuery;
+                            search();
+                          }
+                        };
+
+                        // Event listener for the Enter key
+                        document.getElementById('searchInput').addEventListener('keypress', function (event) {
+                          if (event.key === 'Enter') {
+                            search();
+                          }
+                        });
+
+                        function search() {
+                          var input = document.getElementById('searchInput').value.trim().toLowerCase();
+                          var posts = document.querySelectorAll('.post');
+                          var searchResults = document.getElementById('searchResults');
+                          searchResults.innerHTML = '';
+
+                          // Display the query name
+                          var queryHeading = document.getElementById('queryHeading');
+                          queryHeading.textContent = "Search :  " + input;
+
+                          var resultsFound = false;
+
+                          // Iterate over each post to check for matches
+                          posts.forEach(function (post) {
+                            var keywords = post.getAttribute('data-keywords').toLowerCase();
+                            if (keywords.includes(input)) {
+                              post.style.display = 'block';
+                              searchResults.appendChild(post.cloneNode(false));
+                              resultsFound = true;
+                            } else {
+                              post.style.display = 'none';
+                            }
+                          });
+
+                          // If no results found, display a message
+                          var noResultsMessage = document.getElementById('noResultsMessage');
+                          if (!resultsFound) {
+                            noResultsMessage.style.display = 'block';
+                          } else {
+                            noResultsMessage.style.display = 'none';
+                          }
+
+                          // Modify the URL with the search value
+                          var currentUrl = new URL(window.location.href);
+                          currentUrl.searchParams.set('q', input); // Set the query parameter to 'q'
+                          window.history.pushState({ path: currentUrl.href }, '', currentUrl.href);
+                        }
+                      </script>
 </body>
 <script type="application/javascript">
   // Import the functions you need from the SDKs you need
