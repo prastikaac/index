@@ -11,7 +11,19 @@
 ---------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------
 
-acharyaprasiddha6@gmail.com
+1. Content copy strict!
+
+2. Prasiddha's Blog
+
+3. 
 
 ---------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------
+
+Search Bar :
+
+- Add class="post" and data-keywords attribute to each <article> tag.
+
+- Ensure that the data-keywords attribute contains keywords relevant to each post.
+
+- Ensure that the script iterates over each post, compares the search input with the keywords, and displays the matching posts.
