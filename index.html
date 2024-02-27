@@ -8012,10 +8012,22 @@
         <div class="headD headR">
           <div class="headI">
             <div class="headS section" id="header-search">
-              <!-- <div class="widget BlogSearch" data-version="2" id="BlogSearch1">
-                <form action="https://prasiddhaacharya.com.np/search" class="srchF" target="_top">
+
+
+
+              <script>
+                function submitSearch() {
+                  var baseUrl = "https://prasiddhaacharya.com.np/search?q=";
+                  var searchValue = document.getElementById("searchIn").value.trim().toLowerCase();
+                  var searchUrl = baseUrl + encodeURIComponent(searchValue);
+                  window.location.href = searchUrl;
+                }
+              </script>
+              
+              <div class="widget BlogSearch" data-version="2" id="BlogSearch1">
+                <form onsubmit="submitSearch(); return false;" class="srchF" target="_top">
                   <input aria-label="Search this blog" autocomplete="off" id="searchIn" minlength="3" name="q"
-                    placeholder="Try &#39;Class 12 Notes&#39;" required="required" value />
+                    placeholder="Try 'Class 12 Notes'" required="required" />
                   <span class="sb">
                     <svg class="line" viewbox="0 0 24 24">
                       <g>
@@ -8027,7 +8039,11 @@
                   <button aria-label="Clear" class="sb" data-text="âœ•" type="reset"></button>
                   <span class="fCls"></span>
                 </form>
-              </div> -->
+              </div>
+              
+
+
+              
             </div>
             <div class="headP section" id="header-icon">
               <div class="widget TextList" data-version="2" id="TextList000">

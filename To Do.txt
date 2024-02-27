@@ -22,6 +22,39 @@
 
 Search Bar :
 
+
+
+  <script>
+                function submitSearch() {
+                  var baseUrl = "https://prasiddhaacharya.com.np/search?q=";
+                  var searchValue = document.getElementById("searchIn").value.trim().toLowerCase();
+                  var searchUrl = baseUrl + encodeURIComponent(searchValue);
+                  window.location.href = searchUrl;
+                }
+              </script>
+              
+              <div class="widget BlogSearch" data-version="2" id="BlogSearch1">
+                <form onsubmit="submitSearch(); return false;" class="srchF" target="_top">
+                  <input aria-label="Search this blog" autocomplete="off" id="searchIn" minlength="3" name="q"
+                    placeholder="Try 'Class 12 Notes'" required="required" />
+                  <span class="sb">
+                    <svg class="line" viewbox="0 0 24 24">
+                      <g>
+                        <circle cx="11.36167" cy="11.36167" r="9.36167"></circle>
+                        <line class="svgC" x1="22" x2="19.9332" y1="22" y2="19.9332"></line>
+                      </g>
+                    </svg>
+                  </span>
+                  <button aria-label="Clear" class="sb" data-text="âœ•" type="reset"></button>
+                  <span class="fCls"></span>
+                </form>
+              </div>
+              
+
+
+
+
+
 - Add class="post" and data-keywords attribute to each <article> tag.
 
 - Ensure that the data-keywords attribute contains keywords relevant to each post.
