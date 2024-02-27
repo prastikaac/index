@@ -237,6 +237,23 @@
 
   <!-- Repeat the above article block for other posts with appropriate data-keywords -->
   <script>
+    // Function to extract the search query parameter from the URL
+    function getSearchQueryFromUrl() {
+      var urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get('q');
+    }
+  
+    window.onload = function() {
+      // Get the search query from the URL
+      var searchQuery = getSearchQueryFromUrl();
+      
+      // If a search query is present, populate the search input and perform the search
+      if (searchQuery) {
+        document.getElementById('searchInput').value = searchQuery;
+        search();
+      }
+    };
+  
     function search() {
       var input = document.getElementById('searchInput').value.trim().toLowerCase();
       var posts = document.querySelectorAll('.post');
@@ -270,6 +287,7 @@
       window.history.pushState({ path: currentUrl.href }, '', currentUrl.href);
     }
   </script>
+  
   
 </body>
 </html>
