@@ -10142,6 +10142,223 @@
                               </div>
 
 
+    <div id="Iframe-Master-CC-and-Rs" class="set-margin set-padding set-border set-box-shadow center-block-horiz">
+                                <div class="responsive-wrapper 
+                                 responsive-wrapper-wxh-572x612" style="-webkit-overflow-scrolling: touch; overflow: auto;">
+                                  <style>
+                                    #Iframe-Master-CC-and-Rs {
+                                      max-width: 1000px;
+                                      max-height: 100%;
+                                      overflow: hidden;
+                                    }
+                              
+                                    #Iframe-Master-Cs-and-Rs {
+                                      max-width: 1100px;
+                                      max-height: 100%;
+                                      overflow: hidden;
+                                    }
+                              
+                                    /* inner wrapper: make responsive */
+                                    .responsive-wrapper {
+                                      position: relative;
+                                      height: 0;
+                                      /* gets height from padding-bottom */
+                              
+                                      /* put following styles (necessary for overflow and scrolling handling on mobile devices) inline in .responsive-wrapper around iframe because not stable in CSS:
+                                    -webkit-overflow-scrolling: touch; overflow: auto; */
+                              
+                                    }
+                              
+                                    .responsive-wrapper iframe {
+                                      position: absolute;
+                                      top: 0;
+                                      left: 0;
+                                      width: 100%;
+                                      height: 100%;
+                              
+                                      margin: 0;
+                                      padding: 0;
+                                      border: none;
+                                    }
+                              
+                                    /* padding-bottom = h/w as % -- sets aspect ratio */
+                                    /* YouTube video aspect ratio */
+                                    .responsive-wrapper-wxh-572x612 {
+                                      padding-bottom: 107%;
+                                    }
+                              
+                                    .responsive-wrapper-wxh-572x600 {
+                                      padding-bottom: 55%;
+                                    }
+                              
+                                    /* general styles */
+                                    /* ============== */
+                              
+                                  
+                              
+                                    .set-padding {
+                                      padding: 3px;
+                                    }
+                              
+                                   
+                              
+                              
+                                    /* For mobile and small devices */
+                                    @media (max-width: 767px) {
+                                      .center-block-horiz {
+                                        margin-left: auto !important;
+                                        margin-right: auto !important;
+                                      }
+                                    }
+                              
+                                    /* For PC and large devices */
+                                    @media (min-width: 768px) {
+                                      .center-block-horiz {
+                                        margin-left: auto !important;
+                                      }
+                                    }
+                                  </style>
+                                  <iframe src="https://drive.google.com/file/d/1fVJ_tpNX0gD_O1Cuk46-UCoPw2eC0tt2/preview?usp=sharing" width="800"
+                                    height="500"></iframe>
+                                </div>
+                              </div>
+
+
+                              
+                              <div class="download-container">
+                                  <div class="button-row">
+                                    <a class="button ln" href="https://prasiddhaacharya.com.np/notes/class-12-account/class-12-account.pdf"
+                                      target="_main">View</a>
+                                    <a class="button download-btn" href="#"><i class="icon dl"></i>Download</a>
+                                  </div>
+                                  <div class="countdown"></div>
+                                  <div class="pleaseWait-text">Please wait..</div>
+                                  <div class="manualDownload-text">
+                                    Download will begin shortly, if not then <a href="https://prasiddhaacharya.com.np/notes/class-12-account/class-12-account.pdf" class="manualDownload-link">click here.</a>
+                                  </div>
+                                </div>
+                                
+                                <style>
+                                  .download-container {
+                                    position: relative;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    flex-direction: column;
+                                    padding: 20px;
+                                  }
+                                
+                                  .button-row {
+                                    display: flex;
+                                    gap: 10px;
+                                    margin-bottom: 20px;
+                                  }
+                                
+                                  .countdown {
+                                    font-size: 1.1em;
+                                    font-weight: 600;
+                                    margin-bottom: 20px;
+                                
+                                  }
+                                
+                                  .countdown span {
+                                    font-size: 1.1em;
+                                    font-weight: 800;
+                                    color: var(--darkU);
+                                  }
+                                
+                                  .pleaseWait-text,
+                                  .manualDownload-text {
+                                    font-size: 1em;
+                                    color: #e1235a;
+                                    font-weight: 600;
+                                    display: none;
+                                  }
+                                
+                                  .manualDownload-text a {
+                                    color: var(--darkU);
+                                    font-weight: 800;
+                                    text-decoration: none;
+                                  }
+                                
+                                  @media (max-width: 768px) {
+                                    .download-container {
+                                      position: relative;
+                                      display: flex;
+                                      justify-content: center;
+                                      align-items: center;
+                                      flex-direction: column;
+                                      padding: 20px;
+                                    }
+                                
+                                    .button-row {
+                                      display: flex;
+                                      gap: 10px;
+                                      margin-bottom: 20px;
+                                    }
+                                
+                                    .countdown {
+                                      font-size: 17px;
+                                      font-weight: 600;
+                                      margin-bottom: 20px;
+                                
+                                    }
+                                
+                                    .countdown span {
+                                      font-size: 18px;
+                                      font-weight: 800;
+                                      color: var(--darkU);
+                                    }
+                                
+                                    .pleaseWait-text,
+                                    .manualDownload-text {
+                                      font-size: 14px;
+                                      font-weight: 600;
+                                      display: none;
+                                    }
+                                
+                                    .manualDownload-text a {
+                                      color: var(--darkU);
+                                      font-weight: 800;
+                                      text-decoration: none;
+                                    }
+                                  }
+                                </style>
+                                
+                                <script type="text/javascript">
+                                  const downloadBtn = document.querySelector(".download-btn");
+                                  const countdown = document.querySelector(".countdown");
+                                  const pleaseWaitText = document.querySelector(".pleaseWait-text");
+                                  const manualDownloadText = document.querySelector(".manualDownload-text");
+                                  const manualDownloadLink = document.querySelector(".manualDownload-link");
+                                  var timeLeft = 10;
+
+                                  downloadBtn.addEventListener("click", () => {
+                                    downloadBtn.style.display = "none";
+                                    countdown.innerHTML = "Download will begin automatically in <span>" + timeLeft + "</span> seconds."; //for quick start of countdown
+
+                                    var downloadTimer = setInterval(function timeCount() {
+                                      timeLeft -= 1;
+                                      countdown.innerHTML = "Download will begin automatically in <span>" + timeLeft + "</span> seconds.";
+
+                                      if (timeLeft <= 0) {
+                                        clearInterval(downloadTimer);
+                                        pleaseWaitText.style.display = "block";
+                                        let download_href = "https://prasiddhaacharya.com.np/notes/class-12-account/class-12-account.pdf"; //enter the downloadable file link URL here
+                                        window.location.href = download_href;
+                                        manualDownloadLink.href = download_href;
+
+                                        setTimeout(() => {
+                                          pleaseWaitText.style.display = "none";
+                                          manualDownloadText.style.display = "block";
+                                        }, 4000);
+                                      }
+                                    }, 1000);
+                                  });
+                                </script>
+
+
+
 
                               <h3>About</h3>
                               Our account notes, exercises, and solutions encompass a comprehensive set of features
