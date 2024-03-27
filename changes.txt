@@ -2,10 +2,13 @@ Class-12-Account :
 - Important font increase
 - Table split text 
 
-- 11 12 circle stroke color
 - Bottom Bar Category change
 - category add
 - Top bar : warpar ko check header code
+
+1. Content copy strict!
+
+2. Prasiddha's Blog
 
 - index css : 6088 : position: relative; lai fixed banaune element style ma halera ani top bar fixed hunxa
 

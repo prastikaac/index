@@ -11784,7 +11784,15 @@
                   }
                 </style>
                 <span class="credit">
-                  <span style="font-family:Arial, Helvetica, sans-serif">©</span> <span id="getYear">2023</span> ‧
+                      <span style="font-family:Arial, Helvetica, sans-serif">©</span> <span id="changeyear"></span> ‧
+
+                      <script>
+                        // Get the current year
+                        var currentYear = new Date().getFullYear();
+      
+                        // Update the text content of the span with id "changeyear" to display the current year
+                        document.getElementById("changeyear").textContent = currentYear;
+                      </script>
                   <bdi><a href="https://prasiddhaacharya.com.np">Prasiddha Acharya
 
                       <svg style="    width: 13px;
