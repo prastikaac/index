@@ -17,10 +17,166 @@ Class-12-Account :
 
 
 
+Copy, Select, Inspect block :
+
+
+<style>
+/* CSS for the popup */
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    backdrop-filter: blur(5px); /* Adds a blur effect to the background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    animation: slideInFromBottom 0.2s ease forwards; /* Animation for slide in from bottom */
+    transition: all 0.1s ease; /* Transition for all properties */
+}
+
+@keyframes slideInFromBottom {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(0); }
+}
+</style>
+<script>
+// Variable to track whether the popup is currently displayed
+var popupDisplayed = false;
+
+// Function to show a popup
+function showPopup(message) {
+    // Creating a container for the popup
+    var container = document.createElement('div');
+    container.classList.add('popup-container');
+
+    // Creating the popup div
+    var popup = document.createElement('div');
+    popup.classList.add('popup');
+    popup.innerHTML = message;
+
+    // Appending the popup to the container
+    container.appendChild(popup);
+
+    // Appending the container to the document body
+    document.body.appendChild(container);
+
+    // Set popupDisplayed to true to indicate that the popup is displayed
+    popupDisplayed = true;
+
+    // Removing the popup and container after 2 seconds
+    setTimeout(function() {
+        container.parentNode.removeChild(container);
+        // Set popupDisplayed to false after the popup disappears
+        popupDisplayed = false;
+    }, 2000);
+}
+
+// Function to show a popup when copying content
+function preventCopy(event) {
+    event.preventDefault();
+    if (!popupDisplayed) {
+        showPopup('Well, well, look who\'s the copycat today!');
+    }
+}
+
+// Function to limit selection to 50 characters
+function limitSelection(event) {
+    var selection = window.getSelection().toString();
+    if (selection.length > 50) {
+        window.getSelection().removeAllRanges();
+        showPopup("Well, well, look who\'s the copycat today!");
+        event.preventDefault();
+    }
+}
+
+// Function to handle Ctrl+A (select all)
+function handleSelectAll(event) {
+    if (event.ctrlKey && event.key === 'a') {
+        var content = document.body.textContent;
+        if (content.length > 50) {
+            showPopup("Well, well, look who\'s the copycat today!");
+            event.preventDefault();
+        }
+    }
+}
+
+// Adding event listener to disable copying
+document.addEventListener("copy", preventCopy);
+
+// Adding event listener to limit selection
+document.addEventListener("mouseup", limitSelection);
+
+// Adding event listener to handle Ctrl+A
+document.addEventListener("keydown", handleSelectAll);
+
+// Function to show a popup when right-clicking
+function preventRightClick(event) {
+    event.preventDefault();
+    if (!popupDisplayed) {
+        // Creating a container for the popup
+        var container = document.createElement('div');
+        container.classList.add('popup-container');
+
+        // Creating the popup div
+        var popup = document.createElement('div');
+        popup.classList.add('popup');
+        popup.innerHTML = 'Arey arey, Not this way!';
+
+        // Appending the popup to the container
+        container.appendChild(popup);
+
+        // Appending the container to the document body
+        document.body.appendChild(container);
+
+        // Set popupDisplayed to true to indicate that the popup is displayed
+        popupDisplayed = true;
+
+        // Removing the popup and container after 2 seconds
+        setTimeout(function() {
+            container.parentNode.removeChild(container);
+            // Set popupDisplayed to false after the popup disappears
+            popupDisplayed = false;
+        }, 2000);
+    }
+}
+
+// Adding event listener to disable right-clicking
+document.addEventListener("contextmenu", preventRightClick);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 New bottom bar space with blur background  :
-
-
-
 
 
 <div class="pCmnts" id="comment">
