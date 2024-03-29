@@ -1,0 +1,40 @@
+/* CSS for the popup */
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent black */
+    backdrop-filter: blur(5px);
+    /* Adds a blur effect to the background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    font-weight: bold;
+}
+
+.popup {
+    background-color: #fff;
+    color: #333;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    animation: slideInFromBottom 0.2s ease forwards;
+    /* Animation for slide in from bottom */
+    transition: all 0.1s ease;
+    /* Transition for all properties */
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
