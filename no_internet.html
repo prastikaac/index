@@ -59,12 +59,11 @@
             }
         }
 
-        // Check internet status on page load
+        // Check internet status initially
         checkInternet();
 
-        // Check internet status on window online/offline events
-        window.addEventListener('online', checkInternet);
-        window.addEventListener('offline', checkInternet);
+        // Check internet status every 2 seconds
+        setInterval(checkInternet, 2000);
     </script>
 </body>
 
