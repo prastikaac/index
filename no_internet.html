@@ -52,8 +52,10 @@
                 // Hide no internet page
                 document.getElementById('noInternetPage').style.display = 'none';
             } else {
-                // Hide main content
-                document.getElementById('mainContent').style.display = 'none';
+                // Hide main content only if the page is not being reloaded
+                if (!performance.navigation.type == 1) {
+                    document.getElementById('mainContent').style.display = 'none';
+                }
                 // Show no internet page
                 document.getElementById('noInternetPage').style.display = 'block';
             }
