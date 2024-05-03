@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notification Tab</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #007bff;
+    }
+    #notification-icon {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+    #notification-count {
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 50%;
+        padding: 5px;
+        font-size: 12px;
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        display: none;
+    }
+    #notifications-outer-div {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(10px);
+        z-index: 999;
+        display: none;
+    }
+    #notifications-container {
+        position: fixed;
+        top: 60px;
+        right: 20px;
+        width: 250px;
+        max-height: 300px;
+        overflow-y: auto;
+        background-color: #f4f4f4;
+        border-radius: 5px;
+        padding: 10px;
+        z-index: 999;
+
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    .notification {
+        margin-bottom: 5px;
+        cursor: pointer;
+        position: relative;
+        padding: 10px;
+        transition: all 0.3s ease;
+        border-radius: 5px;
+    }
+    .notification.unread {
+        background-color: #D2691E; /* Brown */
+        color: #fff;
+    }
+    .notification.read {
+        background-color: #fff; /* White */
+        color: #000;
+    }
+
+    .notification.expanded {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        max-width: 400px;
+        max-height: 80%;
+        overflow-y: auto;
+       
+        background: white;
+        backdrop-filter: saturate(180%) blur(10px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    .notification.expanded .unread-dot {
+        display: none;
+    }
+    .notification.expanded .notification-content {
+        padding: 20px;
+    }
+    .unread-dot {
+        width: 10px;
+        height: 10px;
+        background-color: blue;
+        border-radius: 50%;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        display: none;
+    }
+    .notification.unread .unread-dot {
+        display: block;
+    }
+    .notification-title {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    .new-notification {
+        font-size: smaller;
+        color: green;
+        margin-bottom: 5px;
+    }
+    .close-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        font-size: 20px;
+        color: #777;
+    }
+</style>
+</head>
+<body>
+
+<div style="z-index: 9999;" id="notification-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+        <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6"/>
+    </svg>
+    <span id="notification-count">0</span>
+    
+</div>
+
+<div id="notifications-outer-div" class="notification-outer-div"></div>
+<div id="notifications-container"></div>
+
+<script>
+    // Function to display notifications
+    function displayNotifications(notifications) {
+        var notificationCount = document.getElementById('notification-count');
+        var notificationsContainer = document.getElementById('notifications-container');
+        var notificationsOuterDiv = document.getElementById('notifications-outer-div');
+
+        // Retrieve read notifications from cache
+        var readNotifications = JSON.parse(localStorage.getItem('readNotifications')) || [];
+
+        // Clear previous notifications
+        notificationsContainer.innerHTML = '';
+
+        // Generate notifications
+        var unreadCount = 0;
+        var isNewNotificationDisplayed = false;
+        notifications.forEach(function(notification, index) {
+            var notificationElement = document.createElement('div');
+            notificationElement.classList.add('notification');
+            if (readNotifications.includes(notification.title)) {
+                notificationElement.classList.add('read');
+            } else {
+                notificationElement.classList.add('unread');
+                unreadCount++;
+                if (!isNewNotificationDisplayed) {
+                    var newNotificationText = document.createElement('div');
+                    newNotificationText.classList.add('new-notification');
+                    newNotificationText.textContent = 'New Notification';
+                    notificationsContainer.appendChild(newNotificationText);
+                    isNewNotificationDisplayed = true;
+                }
+            }
+            var previewText = truncate(notification.content, 20);
+            notificationElement.innerHTML = '<span class="unread-dot"></span><div class="notification-title">' + notification.title + '</div><div class="notification-preview">' + previewText + '...</div><div class="notification-content" style="display:none;">' + notification.content + '</div>';
+            notificationsContainer.appendChild(notificationElement);
+        });
+
+        // Update notification count
+        if (unreadCount > 0) {
+            notificationCount.innerText = unreadCount;
+            notificationCount.style.display = 'inline';
+        } else {
+            notificationCount.style.display = 'none';
+        }
+
+        // Show notifications container
+        notificationsContainer.style.display = 'none';
+
+        // Event listener for clicking on notifications
+        notificationsContainer.addEventListener('click', function(event) {
+            var notification = event.target.closest('.notification');
+            if (notification) {
+                notification.classList.toggle('expanded');
+                var closeButton = document.createElement('span');
+                closeButton.classList.add('close-button');
+                closeButton.innerHTML = '&times;';
+                closeButton.addEventListener('click', function() {
+                    notification.classList.remove('expanded');
+                    closeButton.remove();
+                    notificationsOuterDiv.style.display = 'none'; // Hide blur background when closing notification
+                });
+                if (notification.classList.contains('expanded')) {
+                    notification.appendChild(closeButton);
+                    notification.querySelector('.notification-preview').style.display = 'none';
+                    notification.querySelector('.notification-content').style.display = 'block';
+                    notificationsOuterDiv.style.display = 'block'; // Show blur background
+                } else {
+                    notification.querySelector('.notification-preview').style.display = 'block';
+                    notification.querySelector('.notification-content').style.display = 'none';
+                    closeButton.remove();
+                    notificationsOuterDiv.style.display = 'none'; // Hide blur background
+                }
+                if (notification.classList.contains('unread')) {
+                    notification.classList.remove('unread');
+                    notification.classList.add('read');
+                    var notificationTitle = notification.querySelector('.notification-title').textContent;
+                    // Store read notification in cache
+                    readNotifications.push(notificationTitle);
+                    localStorage.setItem('readNotifications', JSON.stringify(readNotifications));
+                    // Update notification count
+                    unreadCount--;
+                    if (unreadCount > 0) {
+                        notificationCount.innerText = unreadCount;
+                    } else {
+                        notificationCount.style.display = 'none';
+                    }
+                }
+            }
+        });
+
+        // Event listener to close extended notification when clicked anywhere on the screen
+        document.body.addEventListener('click', function(event) {
+            var target = event.target;
+            if (!target.closest('.notification.expanded')) {
+                var expandedNotifications = document.querySelectorAll('.notification.expanded');
+                expandedNotifications.forEach(function(notification) {
+                    notification.classList.remove('expanded');
+                    var closeButton = notification.querySelector('.close-button');
+                    if (closeButton) {
+                        closeButton.remove();
+                    }
+                    notificationsOuterDiv.style.display = 'none'; // Hide blur background when closing notification
+                });
+            }
+            // Close notification container if clicked outside of it
+            if (!target.closest('#notification-icon') && !target.closest('#notifications-container')) {
+                notificationsContainer.style.display = 'none';
+                notificationsOuterDiv.style.display = 'none';
+            }
+        });
+    }
+
+    // Function to truncate text
+    function truncate(str, numWords) {
+        var words = str.split(' ');
+        if (words.length > numWords) {
+            return words.slice(0, numWords).join(' ');
+        } else {
+            return str;
+        }
+    }
+
+    // Event listener for clicking on notification icon
+    document.getElementById('notification-icon').addEventListener('click', function() {
+        var notificationsContainer = document.getElementById('notifications-container');
+        notificationsContainer.classList.toggle('active');
+        var notificationsOuterDiv = document.getElementById('notifications-outer-div');
+        notificationsOuterDiv.style.display = notificationsContainer.classList.contains('active') ? 'block' : 'none'; // Toggle blur background
+        if (notificationsContainer.classList.contains('active')) {
+            notificationsContainer.style.display = 'block';
+        } else {
+            notificationsContainer.style.display = 'none';
+        }
+    });
+
+    // Initially display notifications after 1 second
+    displayNotifications([
+        { title: "New message received!", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
+        { title: "You have a meeting in 15 minutes.", content: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium." },
+        { title: "Reminder: Submit your report by EOD.", content: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt." }
+    ]);
+</script>
+
+</body>
+</html>
