@@ -1,3 +1,9 @@
+
+#google-anno-sa {
+    display: none !important;
+}
+
+
 /* CSS for the popup */
 .popup-container {
     position: fixed;
