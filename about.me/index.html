@@ -65,9 +65,7 @@
      crossorigin="anonymous"></script>
 
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4789790292248668"
-        crossorigin="anonymous"></script>
-
+  
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q9FV4GD02L"></script>
     <script>
@@ -93,7 +91,17 @@
         gtag('event', 'conversion', { 'send_to': 'AW-11170099493/8nt7CIC835wYEKXiqM4p' });
     </script>
 
-</head>
+<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "c33fac50-75d1-4d8e-a391-2e8e3e30f5b8",
+    });
+  });
+</script>
+
+</head>>
 
 <body>
 
@@ -690,7 +698,7 @@
                             <div class="col-lg-6 col-12">
                                 <div class="services-thumb">
                                     <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
-                                        <h3 class="mb-0">Developing Websites</h3>
+                                        <h3 class="mb-0">Web Development</h3>
 
                                     </div>
 
@@ -707,7 +715,7 @@
                             <div class="col-lg-6 col-12">
                                 <div class="services-thumb services-thumb-up">
                                     <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
-                                        <h3 class="mb-0">Promotion</h3>
+                                        <h3 class="mb-0">App Development</h3>
 
 
                                     </div>
