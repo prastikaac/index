@@ -1,9 +1,49 @@
-/* ------------------------- Styleguide Â® Code by Adarsh -------------------------------------------------- */
+/* ------------------------- Styleguide ® AmirHosein Masoumi -------------------------------------------------- */
 
 /* ------------------------- Fonts -------------------------------------------------- */
-
 @font-face {
-    font-family: 'Adarsh Sans';
+    font-family: "yekan";
+    src: url("../font/yekan.eot"); /* IE9 Compat Modes */
+    src: url("../font/yekan.eot?#iefix") format("embedded-opentype"),
+      /* IE6-IE8 */ url("../font/yekan.woff") format("woff"),
+      /* Modern Browsers */ url("../font/yekan.woff2") format("woff2"),
+      /* Modern Browsers */ url("../font/yekan.ttf") format("truetype"),
+      /* Safari, Android, iOS */ url("../font/yekan.svg#svgFontName") format("svg"); /* Legacy iOS */
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "yekan";
+    src: url("../font/yekan.eot"); /* IE9 Compat Modes */
+    src: url("../font/yekan.eot?#iefix") format("embedded-opentype"),
+      /* IE6-IE8 */ url("../font/yekan.woff") format("woff"),
+      /* Modern Browsers */ url("../font/yekan.woff2") format("woff2"),
+      /* Modern Browsers */ url("../font/yekan.ttf") format("truetype"),
+      /* Safari, Android, iOS */ url("../font/yekan.svg#svgFontName") format("svg"); /* Legacy iOS */
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "yekan";
+    src: url("../font/yekan.eot"); /* IE9 Compat Modes */
+    src: url("../font/yekan.eot?#iefix") format("embedded-opentype"),
+      /* IE6-IE8 */ url("../font/yekan.woff") format("woff"),
+      /* Modern Browsers */ url("../font/yekan.woff2") format("woff2"),
+      /* Modern Browsers */ url("../font/yekan.ttf") format("truetype"),
+      /* Safari, Android, iOS */ url("../font/yekan.svg#svgFontName") format("svg"); /* Legacy iOS */
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "yekan";
+    src: url("../font/yekan.eot"); /* IE9 Compat Modes */
+    src: url("../font/yekan.eot?#iefix") format("embedded-opentype"),
+      /* IE6-IE8 */ url("../font/yekan.woff") format("woff"),
+      /* Modern Browsers */ url("../font/yekan.woff2") format("woff2"),
+      /* Modern Browsers */ url("../font/yekan.ttf") format("truetype"),
+      /* Safari, Android, iOS */ url("../font/yekan.svg#svgFontName") format("svg"); /* Legacy iOS */
+    font-display: swap;
+  }
+  
+@font-face {
+    font-family: 'Amir Sans';
     src: url('../fonts/NeueMontreal-Light.otf') format('opentype');
     font-weight: 300;
     font-style: normal;
@@ -11,7 +51,7 @@
 }
 
 @font-face {
-    font-family: 'Adarsh Sans';
+    font-family: 'Amir Sans';
     src: url('../fonts/NeueMontreal-LightItalic.otf') format('opentype');
     font-weight: 300;
     font-style: italic;
@@ -19,7 +59,7 @@
 }
 
 @font-face {
-    font-family: 'Adarsh Sans';
+    font-family: 'Amir Sans';
     src: url('../fonts/NeueMontreal-Regular.otf') format('opentype');
     font-weight: 450;
     font-style: normal;
@@ -27,7 +67,7 @@
 }
 
 @font-face {
-    font-family: 'Adarsh Sans';
+    font-family: 'Amir Sans';
     src: url('../fonts/NeueMontreal-Italic.otf') format('opentype');
     font-weight: 450;
     font-style: italic;
@@ -35,7 +75,7 @@
 }
 
 @font-face {
-    font-family: 'Adarsh Sans';
+    font-family: 'Amir Sans';
     src: url('../fonts/NeueMontreal-Bold.otf') format('opentype');
     font-weight: 800;
     font-style: normal;
@@ -43,7 +83,7 @@
 }
 
 @font-face {
-    font-family: 'Adarsh Sans';
+    font-family: 'Amir Sans';
     src: url('../fonts/NeueMontreal-BoldItalic.otf') format('opentype');
     font-weight: 800;
     font-style: italic;
@@ -117,7 +157,7 @@ li, ul {padding: 0; margin: 0; list-style: none;}
 
 body {
     -webkit-font-smoothing: antialiased;
-    font-family: 'Adarsh Sans', sans-serif;
+    font-family: 'Amir Sans',tahoma, sans-serif;
     color: var(--color-text);
     line-height: 1.6;
     font-weight: 450;
@@ -127,13 +167,16 @@ body {
     background-color: var(--color-dark);
 }
 
+.fa{
+    font-family: tahoma;
+}
+
 html, body {
     width: 100%;
     -webkit-font-smoothing: antialiased;
     position: relative;
     background-color: var(--color-dark);
 }
-
 /* Selection */
 ::selection {background-color: var(--color-blue); color: var(--color-white); text-shadow: none;}
 ::-moz-selection {background-color: var(--color-blue); color: var(--color-white); text-shadow: none;}
@@ -160,7 +203,7 @@ h1, h2, h3, h4, h5, h6, p, a, li, ul, ol, span, strong, em  {padding: 0; margin:
 h1:last-child, h2:last-child, h3:last-child, h4:last-child, p:last-child, p.big:last-child, p.small:last-child, a:last-child, strong:last-child  {margin-bottom: 0;}
 
 h1 {
-    font-family: 'Adarsh Sans', sans-serif;
+    font-family: 'Amir Sans', sans-serif;
     font-weight: 450;
     font-style: normal;
     font-size: clamp(3.25em, 7vw, 8em);
@@ -170,7 +213,7 @@ h1 {
 }
   
 h2 {
-    font-family: 'Adarsh Sans', sans-serif;
+    font-family: 'Amir Sans', sans-serif;
     font-weight: 450;
     font-style: normal;
     font-size: calc(clamp(3.25em, 5vw, 4.5em) * .75);
@@ -179,7 +222,7 @@ h2 {
 }
   
 h3 {
-    font-family: 'Adarsh Sans', sans-serif;
+    font-family: 'Amir Sans', sans-serif;
     font-weight: 450;
     font-style: normal;
     font-size: clamp(2.66em, 4.65vw, 5.32em);
@@ -188,7 +231,7 @@ h3 {
 }
   
 h4 {
-    font-family: 'Adarsh Sans', sans-serif;
+    font-family: 'Amir Sans', sans-serif;
     font-weight: 450;
     font-style: normal;
     font-size: clamp(1.55em, 2.3vw, 2.5em);
@@ -197,7 +240,7 @@ h4 {
 }
 
 h5 {
-    font-family: 'Adarsh Sans', sans-serif;
+    font-family: 'Amir Sans', sans-serif;
     font-weight: 450;
     font-style: normal;
     font-size: .6em;
@@ -210,7 +253,7 @@ h5 {
 
 
 p {
-    font-family: 'Adarsh Sans', sans-serif;
+    font-family: 'Amir Sans', sans-serif;
     font-weight: 450;
     font-style: normal;
     color: var(--text);
@@ -658,7 +701,7 @@ video.overlay {
 }
 
 
-/* --- Button Â© Left Top --- */
+/* --- Button © Left Top --- */
 
 .btn-link.btn-left-top .btn-click::after {
     display: none;
@@ -695,7 +738,7 @@ video.overlay {
     transform: translateX(-3.7em) rotate(0.001deg);
 }
 
-.btn-link.btn-left-top .Adarsh {
+.btn-link.btn-left-top .dennis {
     transform: translateX(0) rotate(0.001deg);
     position: relative;
     display: inline-block;
@@ -704,7 +747,7 @@ video.overlay {
     transition: var(--animation-primary);
 }
 
-.btn-link.btn-left-top:hover .Adarsh {
+.btn-link.btn-left-top:hover .dennis {
     padding-right: 2em;
     transform: translateX(-3.7em) rotate(0.001deg);
 }
@@ -729,7 +772,7 @@ video.overlay {
         transform: translateX(0) rotate(0.001deg);
     }
     
-    .btn-link.btn-left-top:hover .Adarsh {
+    .btn-link.btn-left-top:hover .dennis {
         padding-right: .2em;
         transform: translateX(0) rotate(0.001deg);
     }

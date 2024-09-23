@@ -836,10 +836,6 @@ function initVisualFilter() {
           ScrollTrigger.refresh();
           scroll.start();
       }, 700);
-      setTimeout(function() {
-         scroll.update();
-         console.log('scroll- updated');
-     }, 1000);
       }
     });
     $('.all-btn').click(function(){
@@ -1078,7 +1074,7 @@ function initTimeZone() {
   const timeSpan = document.querySelector("#timeSpan");
 
   const optionsTime = {
-    timeZone: 'Asia/Kolkata',
+    timeZone: 'Asia/Tehran',
     timeZoneName: 'short',
     // year: 'numeric',
     // month: 'numeric',

@@ -1,4 +1,4 @@
-/* ------------------------- Style Â® Code by Adarsh -------------------------------------------------- */
+/* ------------------------- Style ® AmirHosein Masoumi -------------------------------------------------- */
 
 main {
    box-sizing: border-box;
@@ -666,7 +666,7 @@ main.touch .main-wrap {
    .socials li {
       display: inline-flex;
       font-size: 1em;
-      margin-right: 0;
+      margin-right: .25em;
    }
    
    .bottom-footer p {
@@ -2062,7 +2062,7 @@ main.touch .main-wrap {
 }
 
 .single-about-image .overlay:nth-child(1) {
-   background: url("./imgs/ashu_pic.png") center center no-repeat;
+   background: url("../img/DSC07312-2.jpg") center center no-repeat;
    background-size: cover;
    top: -20vh;
    height: 105%;
@@ -2315,14 +2315,14 @@ main.touch .main-wrap {
 }
 
 .about-awwwards .single-image  .overlay:nth-child(1) {
-   background: url("./imgs/Screenshot\ 2023-06-24\ 122258.png") center center no-repeat;
+   background: url("../img/DSC07292.jpg") center center no-repeat;
    background-size: cover;
    height: 130%;
    top: -25%;
    width: 105%;
    left: -5%;
 
-   background: url("./imgs/Screenshot\ 2023-06-24\ 122258.png") center center no-repeat;
+   background: url("../img/DSC07079.jpg") center center no-repeat;
    background-size: cover;
    top: -3%;
    height: 106%;
