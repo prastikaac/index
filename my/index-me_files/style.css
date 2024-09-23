@@ -1,4 +1,4 @@
-/* ------------------------- Style ® Code by Dennis -------------------------------------------------- */
+/* ------------------------- Style Â® Code by Adarsh -------------------------------------------------- */
 
 main {
    box-sizing: border-box;
@@ -2062,7 +2062,7 @@ main.touch .main-wrap {
 }
 
 .single-about-image .overlay:nth-child(1) {
-   background: url("../img/DSC07312-2.jpg") center center no-repeat;
+   background: url("./imgs/ashu_pic.png") center center no-repeat;
    background-size: cover;
    top: -20vh;
    height: 105%;
@@ -2315,26 +2315,19 @@ main.touch .main-wrap {
 }
 
 .about-awwwards .single-image  .overlay:nth-child(1) {
-   /* background: url("../img/DSC07292.jpg") center center no-repeat;
+   background: url("./imgs/Screenshot\ 2023-06-24\ 122258.png") center center no-repeat;
    background-size: cover;
    height: 130%;
    top: -25%;
    width: 105%;
-   left: -5%; */
+   left: -5%;
 
-   background: url("../img/DSC07079.jpg") center center no-repeat;
+   background: url("./imgs/Screenshot\ 2023-06-24\ 122258.png") center center no-repeat;
    background-size: cover;
    top: -3%;
    height: 106%;
    width: 140%;
    left: -40%;
-
-   /* background: url("../img/Kien_Team-16.jpg") center center no-repeat;
-   background-size: cover;
-   top: -3%;
-   height: 106%;
-   width: 140%;
-   left: -14%; */
 }
 
 .about-awwwards .single-image  .overlay:nth-child(2) {
@@ -3028,7 +3021,6 @@ main.touch .case-intro-image .btn-wrap {
    background: transparent;
    transform: translateX(-50%);
    overflow: hidden;
-   z-index: 2;
 }
 
 .footer-case-wrap .tile-image-wrap::before {
