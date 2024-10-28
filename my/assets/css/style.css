@@ -31,7 +31,7 @@ body {
   
 @media only screen and (max-width: 600px) {
     .pas {
-        margin-top: -50px;
+        margin-top: -60px;
         margin-bottom: 20px;
     }
 
@@ -41,11 +41,11 @@ body {
 
 
     .prj {
-       margin-top: -40px;
+       margin-top: -50px;
     }
 
     .wor {
-        margin-top: -50px;
+        margin-top: -60px;
     }
 
     .arsg {
