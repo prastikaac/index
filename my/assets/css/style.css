@@ -12,6 +12,49 @@ body {
 }
 
 
+@media only screen and (max-width: 600px) {
+    .hel {
+        font-size: 33px;
+    }
+}
+
+.letcon {
+    font-size: 70px; /* Default for PC */
+  }
+  
+  @media (max-width: 768px) {
+    .letcon {
+      font-size: 41px !important; /* Mobile */
+    }
+  }
+
+  
+@media only screen and (max-width: 600px) {
+    .pas {
+        margin-top: -50px;
+        margin-bottom: 20px;
+    }
+
+    .pro {
+        margin-top: -20px;
+    }
+
+
+    .prj {
+       margin-top: -40px;
+    }
+
+    .wor {
+        margin-top: -50px;
+    }
+
+    .arsg {
+        display: none !important;
+    }
+}
+
+
+
 .ld {
     font-weight: bold;
 }
