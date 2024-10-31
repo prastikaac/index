@@ -29,6 +29,11 @@ body {
   }
 
   
+  .intro {
+    font-size: 25px;
+  }
+   
+
 @media only screen and (max-width: 600px) {
     .pas {
         margin-top: -60px;
@@ -51,6 +56,20 @@ body {
     .arsg {
         display: none !important;
     }
+
+    .intro {
+        font-size: 18px;
+        margin-top: -40px;
+      }
+
+      .testi {
+        font-size: 35px !important;
+        margin-top: 40px;
+        margin-left: 10px;
+        margin-right: 10px;
+        line-height: 1.1;
+      }
+    
 }
 
 
