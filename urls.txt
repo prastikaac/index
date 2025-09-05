@@ -54,7 +54,7 @@ https://prasiddhaacharya.com.np/neb/class-10-english : Not Indexed
 https://prasiddhaacharya.com.np/neb/class-10-nepali : Not Indexed
 https://prasiddhaacharya.com.np/neb/class-10-math : Not Indexed
 https://prasiddhaacharya.com.np/neb/class-10-model-questions : 
-https://prasiddhaacharya.com.np/neb/class-10-result-2080 :
+https://prasiddhaacharya.com.np/neb/class-10-result-2081 :
 https://prasiddhaacharya.com.np/neb/class-10-syllabus :
 
 --------------------------------------------------------------------------------------------------------------------------
@@ -85,7 +85,7 @@ https://prasiddhaacharya.com.np/neb/class-12-math : Indexed
 https://prasiddhaacharya.com.np/neb/class-12-biology : Indexed 
 https://prasiddhaacharya.com.np/neb/class-12-computer : Indexed 
 https://prasiddhaacharya.com.np/neb/class-12-account : Indexed 
-https://prasiddhaacharya.com.np/neb/class-12-exam-result-2080 : Indexed
+https://prasiddhaacharya.com.np/neb/class-12-exam-result-2081 : Indexed
 https://prasiddhaacharya.com.np/neb/class-12-summary : Indexed
 https://prasiddhaacharya.com.np/neb/class-12-model-questions : Indexed
 https://prasiddhaacharya.com.np/neb/class-12-syllabus : Indexed 
