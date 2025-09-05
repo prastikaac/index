@@ -315,7 +315,7 @@
         }
 
         @media (min-width: 768px) {
-        .modal-content {
+            .modal-content {
                 max-width: 1000px;
             }
         }
@@ -419,10 +419,13 @@
                         placeholder="Search by name, email, or UID...">
                     <select id="filter-select" class="filter-select">
                         <option value="all">All Users</option>
+                        <option value="recent-users">Recent Users</option>
                         <option value="no-email-notifications">No Email Notifications</option>
                         <option value="no-push-notifications">No Push Notifications</option>
                         <option value="empty-fcm-tokens">Empty FCM Tokens</option>
+                        <option value="with-fcm-tokens">Users with FCM Tokens</option>
                     </select>
+
                 </div>
             </div>
             <div class="card-content">
@@ -518,20 +521,34 @@
                 errorMessage.style.display = "block";
             }
         }
-
-        // Function to apply filters and search
         function applyFiltersAndSearch() {
-            let filteredUsers = allUsers;
+            let filteredUsers = [...allUsers]; // Make a copy to avoid modifying original
 
             // Apply filter based on activeFilter
             if (activeFilter === "no-email-notifications") {
-                filteredUsers = filteredUsers.filter(user => user.jobSubscription && user.jobSubscription.emailNotification === false);
+                filteredUsers = filteredUsers.filter(user =>
+                    user.jobSubscription && user.jobSubscription.emailNotification === false
+                );
             } else if (activeFilter === "no-push-notifications") {
-                filteredUsers = filteredUsers.filter(user => user.jobSubscription && user.jobSubscription.pushNotification === false);
+                filteredUsers = filteredUsers.filter(user =>
+                    user.jobSubscription && user.jobSubscription.pushNotification === false
+                );
             } else if (activeFilter === "empty-fcm-tokens") {
-                filteredUsers = filteredUsers.filter(user => !user.fcmTokens || user.fcmTokens.length === 0);
+                filteredUsers = filteredUsers.filter(user =>
+                    !user.fcmTokens || user.fcmTokens.length === 0
+                );
+            } else if (activeFilter === "with-fcm-tokens") {
+                filteredUsers = filteredUsers.filter(user =>
+                    user.fcmTokens && user.fcmTokens.length > 0
+                );
+            } else if (activeFilter === "recent-users") {
+                filteredUsers.sort((a, b) => {
+                    const dateA = a.createdAt?.toDate ? a.createdAt.toDate() : new Date(a.createdAt || 0);
+                    const dateB = b.createdAt?.toDate ? b.createdAt.toDate() : new Date(b.createdAt || 0);
+                    return dateB - dateA; // Newest first
+                });
             }
-            // "all" filter means no filtering needed here
+            // "all" just leaves everything unchanged
 
             // Apply search to the filtered results
             const lowerCaseSearchTerm = searchTerm.toLowerCase();
@@ -540,9 +557,11 @@
                 const email = (user.email || "").toLowerCase();
                 const uid = (user.uid || "").toLowerCase();
 
-                return fullName.includes(lowerCaseSearchTerm) ||
+                return (
+                    fullName.includes(lowerCaseSearchTerm) ||
                     email.includes(lowerCaseSearchTerm) ||
-                    uid.includes(lowerCaseSearchTerm);
+                    uid.includes(lowerCaseSearchTerm)
+                );
             });
 
             renderUserTable(finalUsersToDisplay, activeFilter);
@@ -572,29 +591,39 @@
             } else if (currentFilter === "empty-fcm-tokens") {
                 secondHeader = "FCM Tokens";
                 secondCellContent = (user) => (!user.fcmTokens || user.fcmTokens.length === 0) ? "Empty" : "Present";
+            } else if (currentFilter === "with-fcm-tokens") {
+                secondHeader = "FCM Tokens";
+                secondCellContent = (user) => user.fcmTokens?.length > 0 ? "Present" : "Empty";
+            } else if (currentFilter === "recent-users") {
+                secondHeader = "Created At";
+                secondCellContent = (user) => formatDate(user.createdAt);
             }
 
+
+            // Added SN No column
             table.innerHTML = `
-                <thead>
-                    <tr>
-                        <th>User Name</th>
-                        <th>${secondHeader}</th>
-                        <th>UID</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            `;
+        <thead>
+            <tr>
+                <th>Sn</th>
+                <th>User Name</th>
+                <th>${secondHeader}</th>
+                <th>UID</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    `;
             const tbody = table.querySelector("tbody");
 
-            usersToDisplay.forEach((user) => {
+            usersToDisplay.forEach((user, index) => {
                 const row = document.createElement("tr");
                 row.dataset.uid = user.uid; // Store UID for easy lookup
                 row.innerHTML = `
-                    <td>${user.fullName || "N/A"}</td>
-                    <td>${secondCellContent(user)}</td>
-                    <td class="break-all">${user.uid || "N/A"}</td>
-                `;
+            <td>${index + 1}</td> <!-- Serial Number -->
+            <td>${user.fullName || "N/A"}</td>
+            <td>${secondCellContent(user)}</td>
+            <td class="break-all">${user.uid || "N/A"}</td>
+        `;
                 row.addEventListener("click", () => showUserDetail(user));
                 tbody.appendChild(row);
             });

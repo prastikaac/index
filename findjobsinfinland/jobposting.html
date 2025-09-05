@@ -114,6 +114,29 @@
                 padding: 20px;
             }
         }
+
+        /* Style for multi-select boxes */
+        form select[multiple] {
+            height: 180px;
+            /* show more options at once */
+            overflow-y: auto;
+            cursor: pointer;
+        }
+
+        /* Default option styling */
+        form select[multiple] option {
+            padding: 10px;
+            border-radius: 6px;
+            margin: 2px;
+            font-size: 0.95rem;
+        }
+
+        /* Selected option styling */
+        form select[multiple] option:checked {
+            background-color: #007bff;
+            color: #fff;
+            font-weight: 600;
+        }
     </style>
 
     <!-- Google tag (gtag.js) -->
@@ -145,7 +168,7 @@
         </label><br /><br />
 
         <label>Job Category<br />
-            <select id="jobCategory" required>
+            <select id="jobCategory" multiple required>
                 <option value="it-tech">IT & Tech</option>
                 <option value="engineering">Engineering</option>
                 <option value="nursing">Nursing</option>
@@ -156,7 +179,9 @@
                 <option value="cleaning">Cleaning</option>
                 <option value="housekeeping">Housekeeping</option>
                 <option value="cooking">Cooking</option>
+                <option value="restaurant">Restaurant</option>
                 <option value="hospitality-service">Hospitality & Service</option>
+                <option value="caregiver">Caregiver</option>
                 <option value="education-teaching">Education & Teaching</option>
                 <option value="finance-accounting">Finance & Accounting</option>
                 <option value="sales-marketing">Sales & Marketing</option>
@@ -165,7 +190,9 @@
         </label><br /><br />
 
         <label>Job Location<br />
-            <select id="jobLocation" required>
+            <select id="jobLocation" multiple required>
+                <option value="all-location">All Over Finland</option>
+                <option value="uusimaa-region">Uusimaa Region</option>
                 <option value="helsinki">Helsinki</option>
                 <option value="espoo">Espoo</option>
                 <option value="vantaa">Vantaa</option>
@@ -243,12 +270,18 @@
 
             const title = document.getElementById("jobTitle").value.trim();
             const description = document.getElementById("jobDescription").value.trim();
-            const category = document.getElementById("jobCategory").value;
-            const location = document.getElementById("jobLocation").value;
+
+            // Get multiple selected categories
+            const categorySelect = document.getElementById("jobCategory");
+            const categories = Array.from(categorySelect.selectedOptions).map(opt => opt.value);
+
+            // Get multiple selected locations
+            const locationSelect = document.getElementById("jobLocation");
+            const locations = Array.from(locationSelect.selectedOptions).map(opt => opt.value);
+
             const imageUrl = document.getElementById("jobImageUrl").value.trim();
             const jobLink = document.getElementById("jobLink").value.trim();
 
-            // Simple URL validation (optional)
             function isValidUrl(string) {
                 try {
                     new URL(string);
@@ -270,8 +303,8 @@
             const jobData = {
                 title,
                 description,
-                jobCategory: category,
-                jobLocation: location,
+                jobCategory: categories, // now array
+                jobLocation: locations,  // now array
                 imageUrl,
                 jobLink,
                 createdAt: serverTimestamp()
@@ -286,6 +319,7 @@
                 alert("Error saving job to Firestore.");
             }
         });
+
     </script>
 
     <script type="module" src="/js/popupLogic.js"></script>
