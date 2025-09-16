@@ -37,7 +37,8 @@
     <link href="https://itsamir.com/assets/css/styleguide.css" rel="stylesheet">
     <link href="https://itsamir.com/assets/css/components.css" rel="stylesheet">
     <link href="https://itsamir.com/assets/css/style-new.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="/css/main.css" rel="stylesheet">
 </head>
 <body data-barba="wrapper">
     <div class="no-scroll-overlay"></div>
@@ -163,7 +164,7 @@
                                 </a>
                             </li>
                             <li class="btn btn-link btn-link-external">
-                                <a href="https://wa.me/+9779746988759" target="_blank" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                <a href="https://wa.me/+358449179441" target="_blank" class="btn-click magnetic" data-strength="20" data-strength-text="10">
                                     <span class="btn-text">
                                         <span class="btn-text-inner">WhatsApp</span>
                                     </span>
@@ -274,12 +275,12 @@
                     <div class="form-col">
                         <h5>01</h5>
                         <label class="label" for="name">What's your name?</label>
-                        <input class="field" style="font-size: 16px;" type="text" id="form-name" name="name" value="" required placeholder="Shree Hari *">
+                        <input class="field" style="font-size: 16px;" type="text" id="form-name" name="name" value="" required placeholder="Alex*">
                     </div>
                     <div class="form-col">
                         <h5>02</h5>
                         <label class="label" for="email">What's your email?</label>
-                        <input class="field" style="font-size: 16px;" type="email" id="form-email" name="email" value="" required placeholder="shreehari@gmail.com *">
+                        <input class="field" style="font-size: 16px;" type="email" id="form-email" name="email" value="" required placeholder="alex@gmail.com *">
                     </div>
                     <div class="form-col">
                         <h5>03</h5>
@@ -289,7 +290,7 @@
                     <div class="form-col">
                         <h5>04</h5>
                         <label class="label" for="message">Your message</label>
-                        <textarea class="field" style="font-size: 16px;" type="text" id="form-message" name="message" rows="8" required placeholder="Hello Ac, can you help me with ... *"></textarea>
+                        <textarea class="field" style="font-size: 16px;" type="text" id="form-message" name="message" rows="8" required placeholder="Hei Prasiddha, can you help me with ... *"></textarea>
                     </div>
                     <div class="btn-contact-send">
                         <div class="btn btn-round" data-scroll data-scroll-speed="2" data-scroll-offset="-50%, 0%">
@@ -307,26 +308,19 @@
                 <h5>Contact Details</h5>
                 <ul class="links-wrap">
                     <li class="btn btn-link btn-link-external">
-                        <a href="mailto:acharyaprasiddha6@gmail.com" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                        <a href="mailto:info@prasiddhaacharya.com.np" class="btn-click magnetic" data-strength="20" data-strength-text="10">
                             <span class="btn-text">
-                                <span class="btn-text-inner">acharyaprasiddha6@gmail.com</span>
+                                <span class="btn-text-inner">info@prasiddhaacharya.com.np</span>
                             </span>
                         </a>
                     </li>
                     <li class="btn btn-link btn-link-external">
-                        <a href="tel:+9779746988759" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                        <a href="tel:+358449179441" class="btn-click magnetic" data-strength="20" data-strength-text="10">
                             <span class="btn-text">
-                                <span class="btn-text-inner">+977 9746988759</span>
+                                <span class="btn-text-inner">+358 449179441</span>
                             </span>
                         </a>
                     </li>
-                    <li class="btn btn-link btn-link-external">
-                        <a href="tel:+9779816917186" class="btn-click magnetic" data-strength="20" data-strength-text="10" style="transform: rotate(0.001deg);">
-                           <span class="btn-text" style="transform: rotate(0.001deg);">
-                              <span class="btn-text-inner">+977 9816917186</span>
-                           </span>
-                        </a>
-                     </li>
                 </ul>
                
                 <h5>Socials</h5>
@@ -346,7 +340,7 @@
                        </a>
                     </li>
                     <li class="btn btn-link btn-link-external">
-                       <a href="https://wa.me/+9779746988759" target="_blank" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                       <a href="https://wa.me/+358449179441" target="_blank" class="btn-click magnetic" data-strength="20" data-strength-text="10">
                           <span class="btn-text">
                              <span class="btn-text-inner">WhatsApp</span>
                           </span>
@@ -370,7 +364,15 @@
                 <div class="flex-col">
                     <div class="credits">
                         <h5 class="gog">Version</h5>
-                        <p class="gog em">2024 © Edition</p>
+                        <p class="gog em" id="editionYear"></p>
+
+                                    <script>
+                                        // Get the current year
+                                        const currentYear = new Date().getFullYear();
+
+                                        // Replace the text inside the element
+                                        document.getElementById('editionYear').textContent = `${currentYear} © Edition`;
+                                    </script>
                     </div>
                     <div class="time">
                         <h5 class="gog">Inspire</h5>
@@ -398,7 +400,7 @@
                                 </a>
                             </li>
                             <li class="btn btn-link btn-link-external">
-                                <a href="https://wa.me/+9779746988759" target="_blank" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                <a href="https://wa.me/+358449179441" target="_blank" class="btn-click magnetic" data-strength="20" data-strength-text="10">
                                     <span class="btn-text">
                                         <span class="btn-text-inner">WhatsApp</span>
                                     </span>

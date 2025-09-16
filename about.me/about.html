@@ -35,7 +35,8 @@
     <link href="https://itsamir.com/assets/css/styleguide.css" rel="stylesheet">
     <link href="https://itsamir.com/assets/css/components.css" rel="stylesheet">
     <link href="https://itsamir.com/assets/css/style-new.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="/css/main.css" rel="stylesheet">
 </head>
 
 <body data-barba="wrapper">
@@ -168,7 +169,7 @@
                                     </a>
                                 </li>
                                 <li class="btn btn-link btn-link-external">
-                                    <a href="https://wa.me/+9779746988759" target="_blank" class="btn-click magnetic"
+                                    <a href="https://wa.me/+358449179441" target="_blank" class="btn-click magnetic"
                                         data-strength="20" data-strength-text="10">
                                         <span class="btn-text">
                                             <span class="btn-text-inner">WhatsApp</span>
@@ -792,20 +793,20 @@
                         <div class="row">
                             <div class="flex-col">
                                 <div class="btn btn-normal">
-                                    <a href="mailto:acharyaprasiddha6@gmail.com" class="btn-click magnetic"
+                                    <a href="mailto:info@prasiddhaacharya.com.np" class="btn-click magnetic"
                                         data-strength="25" data-strength-text="15">
                                         <div class="btn-fill"></div>
                                         <span class="btn-text">
-                                            <span class="btn-text-inner change">acharyaprasiddha6@gmail.com</span>
+                                            <span class="btn-text-inner change">info@prasiddhaacharya.com.np</span>
                                         </span>
                                     </a>
                                 </div>
                                 <div class="btn btn-normal">
-                                    <a href="tel:+9779746988759" class="btn-click magnetic" data-strength="25"
+                                    <a href="tel:+358449179441" class="btn-click magnetic" data-strength="25"
                                         data-strength-text="15">
                                         <div class="btn-fill"></div>
                                         <span class="btn-text">
-                                            <span class="btn-text-inner change">+977 9746988759</span>
+                                            <span class="btn-text-inner change">+358 449179441</span>
                                         </span>
                                     </a>
                                 </div>
@@ -817,7 +818,15 @@
                             <div class="flex-col">
                                 <div class="credits">
                                     <h5 class="gog">Version</h5>
-                                    <p class="gog em">2024 © Edition</p>
+                                    <p class="gog em" id="editionYear"></p>
+
+                                    <script>
+                                        // Get the current year
+                                        const currentYear = new Date().getFullYear();
+
+                                        // Replace the text inside the element
+                                        document.getElementById('editionYear').textContent = `${currentYear} © Edition`;
+                                    </script>
                                 </div>
                                 <div class="time">
                                     <h5 class="gog">Inspire</h5>
@@ -846,7 +855,7 @@
                                             </a>
                                         </li>
                                         <li class="btn btn-link btn-link-external">
-                                            <a href="https://wa.me/+9779746988759" target="_blank"
+                                            <a href="https://wa.me/+358449179441" target="_blank"
                                                 class="btn-click magnetic" data-strength="20" data-strength-text="10">
                                                 <span class="btn-text">
                                                     <span class="btn-text-inner">WhatsApp</span>

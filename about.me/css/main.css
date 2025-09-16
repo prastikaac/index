@@ -1,0 +1,9 @@
+.profile-picture {
+    background: url(../assets/images/logoimg.jpg) center center no-repeat !important;
+    background-size: cover !important;
+}
+
+.single-about-image .overlay:nth-child(1) {
+    background: url(../assets/images/mainphoto.jpg) center center no-repeat !important;
+    background-size: cover !important;
+}
