@@ -1,366 +1,552 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!--  This site was created by Prasiddha Acharya  (Code by Amir)  -->
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Swipe Image Gallery</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <!-- Global site tag (gtag.js) - Google Analytics -->
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            text-align: center;
-        }
+   <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
 
-        /* Responsive gallery grid */
-        .images {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 15px;
-            padding: 15px;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        /* Frame for each image */
-        .frame {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-            cursor: pointer;
-            aspect-ratio: 4/3;
-            /* keeps proportion across screens */
-        }
-
-        .frame img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-            display: block;
-        }
-
-        /* Overlay circle */
-        .overlay {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 0;
-            height: 0;
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 50%;
-            transform: translate(50%, 50%);
-            transition: width 0.6s ease, height 0.6s ease;
-            z-index: 1;
-            pointer-events: none;
-        }
-
-        /* Centered text */
-        .frame .text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, 30px);
-            color: white;
-            font-size: 1rem;
-            font-weight: bold;
-            opacity: 0;
-            transition: opacity 0.4s ease 0.3s, transform 0.4s ease 0.3s;
-            z-index: 2;
-            pointer-events: none;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-        }
-
-        /* Hover effects */
-        .frame:hover .text {
-            opacity: 1;
-            transform: translate(-50%, -50%);
-        }
-
-        .frame:hover img {
-            transform: scale(1.1);
-        }
-
-        .frame:hover .overlay {
-            width: 300%;
-            height: 300%;
-        }
-
-        #image-viewer {
-            display: none;
-            /* hidden on page load */
-            position: fixed;
-            z-index: 1000;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.95);
-            align-items: center;
-            justify-content: center;
-            padding: 0 10px;
-            box-sizing: border-box;
-        }
+      gtag('config', 'G-NYHBQB2X2X');
+   </script>
 
 
-        /* Enlarged image */
-        #image-viewer .modal-content {
-            max-width: 100%;
-            max-height: 90vh;
-            /* keep space at top/bottom */
-            object-fit: contain;
-            margin: auto;
-            display: block;
-        }
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
+   <title>Work || Prasiddha Acharya</title>
+   <meta name="description"
+      content="Helping brands thrive in the digital world. Located in The Iran. Delivering tailor-made digital designs and building interactive websites from scratch. © Prasiddha Acharya">
+   <meta name="robots" content="index, follow">
+   <meta property="og:url" content="https://prasiddhaacharya.com.np/p/work">
+   <meta property="og:title" content="Work • Prasiddha Acharya">
+   <meta property="og:discription"
+      content="Helping brands thrive in the digital world. Located in The Iran. Delivering tailor-made digital designs and building interactive websites from scratch. © Prasiddha Acharya">
+   <meta property="og:site_name" content="Prasiddha Acharya" />
+   <meta property="og:type" content="website" />
+   <meta property="og:image" content="media/site/meta-AmirHosein-Masoumi-860x54.jpg">
+   <meta name="google-site-verification" content="qmvjSiSrSRNwGQrpfyeV7b5aCr44qi8_oxN_1rbABKE" />
+   <link rel="canonical" href="https://prasiddhaacharya.com.np/p/work">
+   <link rel="icon" href="https://prasiddhaacharya.com.np/favicon.ico" type="image/x-icon" sizes="32x32">
+   <link href="https://itsamir.com/assets/css/normalize.css" rel="stylesheet">
+   <link href="https://itsamir.com/assets/css/locomotive-scroll.css" rel="stylesheet">
+   <link href="https://itsamir.com/assets/css/styleguide.css" rel="stylesheet">
+   <link href="https://itsamir.com/assets/css/components.css" rel="stylesheet">
+   <link href="https://itsamir.com/assets/css/style-new.css" rel="stylesheet">
+   <link rel="stylesheet" href="assets/css/style.css">
+   <link href="css/main.css" rel="stylesheet">
+   <link href="css/graphic-design.css" rel="stylesheet">
+   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5271624463667101"
+      crossorigin="anonymous"></script>
 
-        .slide-left {
-            transform: translateX(-100%);
-            opacity: 0;
-        }
-
-        .slide-right {
-            transform: translateX(100%);
-            opacity: 0;
-        }
-
-        #image-viewer .close {
-            position: absolute;
-            top: 15px;
-            right: 25px;
-            color: #fff;
-            font-size: 35px;
-            font-weight: bold;
-            cursor: pointer;
-            z-index: 2;
-        }
-
-        /* Thumbnail bar */
-        .thumbnail-bar {
-            display: none;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            padding: 8px 5px;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            overflow-x: auto;
-            z-index: 2000;
-        }
-
-        .thumbnail-bar img {
-            width: 70px;
-            height: 55px;
-            object-fit: cover;
-            cursor: pointer;
-            border: 2px solid transparent;
-            border-radius: 5px;
-            flex-shrink: 0;
-        }
-
-
-
-
-        .thumbnail-bar img.active {
-            border: 2px solid #fff;
-        }
-
-        .thumbnail-bar::-webkit-scrollbar {
-            display: none;
-        }
-
-        /* Extra responsiveness */
-        @media (max-width: 600px) {
-            .frame .text {
-                font-size: 0.9rem;
-            }
-
-            .thumbnail-bar img {
-                width: 55px;
-                height: 45px;
-            }
-
-            #image-viewer {
-                padding: 0 10px;
-                /* adds margin on both sides */
-                box-sizing: border-box;
-            }
-
-            #image-viewer .modal-content {
-                width: 100%;
-                /* take full available width */
-                height: auto;
-                /* keep aspect ratio */
-                max-width: 100%;
-                max-height: 90vh;
-                /* leave space top/bottom */
-                margin: auto;
-                /* center vertically */
-                display: block;
-            }
-        }
-
-        /* Enlarged image for PC */
-        @media (min-width: 601px) {
-            #image-viewer .modal-content {
-                width: 100vw;
-                /* full width of viewport */
-                height: 90vh;
-                /* full height of viewport */
-                max-width: 100vw;
-                max-height: 100vh;
-                object-fit: contain;
-                /* keeps image aspect ratio */
-                margin: 0;
-            }
-
-            
-        .thumbnail-bar img {
-            width: 150px;
-            height: 85px;
-            margin-bottom: 10px;
-            margin-top: 10px;
-        }
-        }
-    </style>
 </head>
 
-<body>
-    <!-- Gallery -->
-    <div class="images">
-        <div class="frame">
-            <img src="https://www.w3schools.com/howto/img_fjords.jpg" alt="">
-            <div class="overlay"></div>
-            <div class="text">Fjords</div>
-        </div>
-        <div class="frame">
-            <img src="https://www.w3schools.com/howto/img_lights.jpg" alt="">
-            <div class="overlay"></div>
-            <div class="text">Lights</div>
-        </div>
-        <div class="frame">
-            <img src="https://www.w3schools.com/howto/img_mountains.jpg" alt="">
-            <div class="overlay"></div>
-            <div class="text">Mountains</div>
-        </div>
-        <div class="frame">
-            <img src="https://www.w3schools.com/howto/img_nature.jpg" alt="">
-            <div class="overlay"></div>
-            <div class="text">Nature</div>
-        </div>
-    </div>
+<body data-barba="wrapper">
+   <div class="no-scroll-overlay"></div>
+   <div class="loading-container">
+      <div class="loading-screen">
+         <div class="rounded-div-wrap top">
+            <div class="rounded-div"></div>
+         </div>
+         <div class="loading-words">
+            <h2 class="home-active home-active-first">Hello
+            </h2>
+            <h2 class="home-active">Bonjour Namaste
+            </h2>
+            <h2 class="home-active">Welcome
+            </h2>
+            <h2 class="home-active">स्वागत हे
+            </h2>
+            <h2 class="home-active">Wassup ?
+            </h2>
+            <h2 class="">Home
+            </h2>
+            <h2 class="active">Work
+            </h2>
+            <h2 class="">About
+            </h2>
+            <h2 class="">Contact
+            </h2>
+            <h2>Success
+            </h2>
+            <h2 class="">Archive
+            </h2>
+            <h2>Error
+            </h2>
+         </div>
+         <div class="rounded-div-wrap bottom">
+            <div class="rounded-div"></div>
+         </div>
+      </div>
+   </div>
 
-    <!-- Modal -->
-    <div id="image-viewer">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="full-image">
-    </div>
+   <body data-barba="wrapper">
+      <div class="no-scroll-overlay"></div>
+      <main class="main no-touch" id="work-single" data-barba="container" data-barba-namespace="work-single">
+         <div class="mouse-pos-list-image no-select" style="top: 347px; left: 181px;"></div>
+         <div class="mouse-pos-list-btn no-select" style="top: 347px; left: 181px;"></div>
+         <div class="mouse-pos-list-span no-select" style="top: 347px; left: 181px;">
+            <p>Next case</p>
+         </div>
+         <div class="btn btn-hamburger">
+            <div class="btn-click magnetic" data-strength="50" data-strength-text="25"
+               style="box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;">
+               <div class="btn-fill"></div>
+               <div class="btn-text">
+                  <div class="btn-bars"></div>
+                  <span class="btn-text-inner">Menu</span>
+               </div>
+            </div>
+         </div>
+         <div class="overlay fixed-nav-back"></div>
+         <div class="fixed-nav theme-dark">
+            <div class="fixed-nav-rounded-div">
+               <div class="rounded-div-wrap">
+                  <div class="rounded-div"></div>
+               </div>
+            </div>
+            <div class="fixed-nav-inner">
+               <div class="row nav-row">
+                  <h5>Navigation</h5>
+                  <div class="stripe"></div>
+                  <ul class="links-wrap">
+                     <li class="btn btn-link ">
+                        <a href="../" class="btn-click magnetic" data-strength="24" data-strength-text="12">
+                           <span class="btn-text">
+                              <span class="btn-text-inner">Home</span>
+                           </span>
+                        </a>
+                     </li>
+                     <li class="btn btn-link active">
+                        <a href="work.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
+                           <span class="btn-text">
+                              <span class="btn-text-inner">Work</span>
+                           </span>
+                        </a>
+                     </li>
+                     <li class="btn btn-link ">
+                        <a href="about.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
+                           <span class="btn-text">
+                              <span class="btn-text-inner">About</span>
+                           </span>
+                        </a>
+                     </li>
+                     <li class="btn btn-link ">
+                        <a href="contact.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
+                           <span class="btn-text">
+                              <span class="btn-text-inner">Contact</span>
+                           </span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="row social-row">
+                  <div class="stripe"></div>
+                  <div class="socials">
+                     <h5>Socials</h5>
+                     <ul>
+                        <li class="btn btn-link btn-link-external">
+                           <a href="https://www.facebook.com/prasiddhacharya" target="_blank" class="btn-click magnetic"
+                              data-strength="20" data-strength-text="10">
+                              <span class="btn-text">
+                                 <span class="btn-text-inner">Facebook</span>
+                              </span>
+                           </a>
+                        </li>
+                        <li class="btn btn-link btn-link-external">
+                           <a href="https://www.instagram.com/prasiddha_acharya/" target="_blank"
+                              class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                              <span class="btn-text">
+                                 <span class="btn-text-inner">Instagram</span>
+                              </span>
+                           </a>
+                        </li>
+                        <li class="btn btn-link btn-link-external">
+                           <a href="https://wa.me/+358449179441" target="_blank" class="btn-click magnetic"
+                              data-strength="20" data-strength-text="10">
+                              <span class="btn-text">
+                                 <span class="btn-text-inner">WhatsApp</span>
+                              </span>
+                           </a>
+                        </li>
+                        <li class="btn btn-link btn-link-external">
+                           <a href="https://www.linkedin.com/in/prasiddha-acharya/" target="_blank"
+                              class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                              <span class="btn-text">
+                                 <span class="btn-text-inner">LinkedIn</span>
+                              </span>
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="main-wrap" data-scroll-container="">
+            <section class="section case-top-wrap ">
+               <header class="section default-header work-header" data-scroll-section>
 
-    <!-- Thumbnails -->
-    <div class="thumbnail-bar"></div>
+                  <div class="nav-bar">
+                     <div class="credits-top">
+                        <div class="btn btn-link btn-left-top">
+                           <a href="#" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                              <span class="btn-text">
+                                 <div class="credit" style="font-family: sans-serif;"><span>©</span></div>
+                                 <div class="cbd" style="font-size: 15px;"><span class="code-by">Code
+                                       by</span><span class="dennis"><span class="dennis-span">-
+                                          Prasiddha</span> <span class="snellenberg">&nbsp; &nbsp; &nbsp;
+                                          &nbsp; &nbsp;
+                                          Ac</span></span>
+                              </span>
+                        </div>
+                        </span>
+                        </a>
+                     </div>
+                  </div>
 
-    <script>
-        let currentIndex = 0;
-        const images = $(".frame img").map(function () {
-            return $(this).attr("src");
-        }).get();
 
-        $(".frame img").click(function () {
-            currentIndex = images.indexOf($(this).attr("src"));
-            showImage();
-            $("#image-viewer")
-                .css("display", "flex")   // make it flex when visible
-                .hide()
-                .fadeIn(100);
-            $(".thumbnail-bar").fadeIn(200);
-        });
 
-        // Close button
-        $("#image-viewer .close").click(function () {
-            closeViewer();
-        });
+                  <ul class="links-wrap">
+                     <li class="btn btn-link">
+                        <a href="work.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                           <span class="btn-text">
+                              <span class="btn-text-inner">Work</span>
+                           </span>
+                        </a>
+                     </li>
+                     <li class="btn btn-link">
+                        <a href="about.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                           <span class="btn-text">
+                              <span class="btn-text-inner">About</span>
+                           </span>
+                        </a>
+                     </li>
+                     <li class="btn btn-link">
+                        <a href="contact.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                           <span class="btn-text">
+                              <span class="btn-text-inner">Contact</span>
+                           </span>
+                        </a>
+                     </li>
+                     <li class="btn btn-link btn-menu" style="list-style-type: none;">
+                        <div class="btn-text">
+                           <span class="btn-text-inner">Menu &nbsp;<svg xmlns="http://www.w3.org/2000/svg"
+                                 style="margin-bottom: 5px; font-weight: bold;" width="18" height="18"
+                                 fill="currentColor" class="bi bi-arrow-down-left" viewBox="0 0 16 16">
+                                 <path fill-rule="evenodd"
+                                    d="M2 13.5a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 0-1H3.707L13.854 2.854a.5.5 0 0 0-.708-.708L3 12.293V7.5a.5.5 0 0 0-1 0z" />
+                              </svg>
+                           </span>
+                        </div>
+                     </li>
+                  </ul>
+         </div>
+         <div class="container medium once-in" style="transform: translate(0px, 0vh);">
+            <div class="row">
+               <div class="flex-col">
+                  <!-- <p>Case study</p> -->
+                  <h1 style="margin-left: -10px;">Graphic Designs</h1>
+               </div>
+            </div>
+         </div>
+         </header>
+      
 
-        // ✅ Close if clicked outside the image
-        $("#image-viewer").click(function (e) {
-            if (!$(e.target).is("#full-image, .close")) {
-                closeViewer();
+     
+
+        
+
+            <!-- Gallery -->
+            <div class="uqimages">
+               <div class="uqframe">
+                  <img src="designs/30kfollowers.png" alt="30k Followers">
+                  <div class="uqoverlay"></div>
+                  <div class="text">Facebook Cover</div>
+               </div>
+               <div class="uqframe">
+                  <img src="designs/ac-designs.png" alt="AC Designs">
+                  <div class="uqoverlay"></div>
+                  <div class="text">Jamastami</div>
+               </div>
+               <div class="uqframe">
+                  <img src="designs/antim pusta.jpg" alt="Antin Pusta">
+                  <div class="uqoverlay"></div>
+                  <div class="text">Youtube Thumbnail</div>
+               </div>
+               <div class="uqframe">
+                  <img src="designs/balu-thumb.png" alt="Bana Thumbnail">
+                  <div class="uqoverlay"></div>
+                  <div class="text">Youtube Thumbnail</div>
+               </div>
+               <div class="uqframe">
+                  <img src="designs/Barkha ko bela (Thumbnail).png" alt="Banko La Beta Thumbnail">
+                  <div class="uqoverlay"></div>
+                  <div class="text">Youtube Thumbnail</div>
+               </div>
+               <div class="uqframe">
+                  <img src="designs/charkeko-maya-thumb.png" alt="Charkhe Maya Thumbnail">
+                  <div class="uqoverlay"></div>
+                  <div class="text">Youtube Thumbnail</div>
+               </div>
+               <div class="uqframe">
+                  <img src="designs/chitlang thumb.png" alt="Chitlang Thumbnail">
+                  <div class="uqoverlay"></div>
+                  <div class="text">Youtube Thumbnail</div>
+               </div>
+               <div class="uqframe">
+                  <img src="designs/gurupurnima.png" alt="Ganga Purnima">
+                  <div class="uqoverlay"></div>
+                  <div class="text">Guru Purnima</div>
+               </div>
+               <div class="uqframe">
+                  <img src="designs/IMG-20241113-WA0040.jpg" alt="IMG">
+                  <div class="uqoverlay"></div>
+                  <div class="text">Social Media Post</div>
+               </div>
+               <div class="uqframe">
+                  <img src="designs/janaipurnima.png" alt="Janai Purnima">
+                  <div class="uqoverlay"></div>
+                  <div class="text">Janai Purnima</div>
+               </div>
+               <div class="uqframe">
+                  <img src="designs/Labour-Day-Cover-Nep.png" alt="Labour Day">
+                  <div class="uqoverlay"></div>
+                  <div class="text">Labour Day</div>
+               </div>
+               <div class="uqframe">
+                  <img src="designs/mothersday.jpg" alt="Mother's Day">
+                  <div class="uqoverlay"></div>
+                  <div class="text">Mother's Day</div>
+               </div>
+               <div class="uqframe">
+                  <img src="designs/new year one.png" alt="New Year One">
+                  <div class="uqoverlay"></div>
+                  <div class="text">New Year Wish</div>
+               </div>
+               <div class="uqframe">
+                  <img src="designs/new year two.png" alt="New Year Two">
+                  <div class="uqoverlay"></div>
+                  <div class="text">New Year Wish</div>
+               </div>
+               <div class="uqframe">
+                  <img src="designs/prakritithumbnail.png" alt="Prakriti Thumbnail">
+                  <div class="uqoverlay"></div>
+                  <div class="text">Youtube Thumbnail</div>
+               </div>
+               <div class="uqframe">
+                  <img src="designs/story of nepali cricket.png" alt="Story of Nepali Cricket">
+                  <div class="uqoverlay"></div>
+                  <div class="text">Youtube Thumbnail</div>
+               </div>
+            </div>
+
+
+            <!-- Modal -->
+            <div id="uq-image-viewer">
+               <span class="close">&times;</span>
+               <img class="modal-content" id="uq-full-image">
+            </div>
+
+            <!-- Thumbnails -->
+            <div class="uq-thumbnail-bar"></div>
+
+
+           
+   
+
+      
+
+         <section class="section single-block block-fullwidth block_3" data-scroll-section=""
+            data-scroll-section-id="section6"
+            style="opacity: 0; pointer-events: none; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);">
+            <div class="row">
+               <div class="flex-col">
+                  <div class="single-image">
+                     <div class="overlay overlay-image" data-scroll="" data-scroll-speed="-3"
+                        style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);">
+                        <img class="lazy" src="../media/pages/work/verizon/d928c28a4d-1653056956/verizon-003.jpg"
+                           data-src="../media/pages/work/verizon/d928c28a4d-1653056956/verizon-003.jpg">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="section single-block block-screenshot block_4 block-padding-bottom "
+            style="background-color: rgb(212, 181, 181); opacity: 0; pointer-events: none; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);"
+            data-scroll-section="" data-scroll-section-id="section7">
+            <div class="container">
+               <div class="row ">
+                  <div class="flex-col">
+                     <div class="device">
+                        <div class="single-image">
+                           <img class="lazy" src="../media/pages/work/verizon/8a4648644c-1653055959/verizon-004.png"
+                              data-src="../media/pages/work/verizon/8a4648644c-1653055959/verizon-004.png" width="4400"
+                              height="2120">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <div class="footer-rounded-div" data-scroll-section>
+            <div class="rounded-div-wrap">
+               <div class="rounded-div"></div>
+            </div>
+         </div>
+         <div class="footer-wrap footer-footer-wrap theme-dark" data-scroll-section>
+            <footer class="section footer " data-scroll data-scroll-speed='-4' data-scroll-position='bottom'
+               data-scroll-section>
+               <div class="container medium">
+                  <div class="row">
+                     <div class="flex-col">
+                        <div class="arrow">
+                           <svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1"
+                              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                              <title>arrow-up-right</title>
+                              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                 <g id="Artboard" transform="translate(-1019.000000, -279.000000)" stroke="#FFFFFF"
+                                    stroke-width="1.5">
+                                    <g id="arrow-up-right"
+                                       transform="translate(1026.000000, 286.000000) rotate(90.000000) translate(-1026.000000, -286.000000) translate(1020.000000, 280.000000)">
+                                       <polyline id="Path" points="2.76923077 0 12 0 12 9.23076923"></polyline>
+                                       <line x1="12" y1="0" x2="0" y2="12" id="Path"></line>
+                                    </g>
+                                 </g>
+                              </g>
+                           </svg>
+                        </div>
+                        <h2 class="gog" style="line-height: 1.2;"><span>
+                              <div class="profile-picture"></div> Let’s work
+                           </span><span>together</span></h2>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="flex-col">
+                        <div class="stripe"></div>
+                        <div class="btn-fixed">
+                           <div class="btn btn-round" data-scroll data-scroll-speed="-1"
+                              data-scroll-direction="horizontal" data-scroll-position="bottom"
+                              data-scroll-offset="-50%, 0">
+                              <a href="contact.html" class="btn-click magnetic " data-strength="100"
+                                 data-strength-text="50">
+                                 <div class="btn-fill"></div>
+                                 <span class="btn-text">
+                                    <span class="btn-text-inner">Get in touch</span>
+                                 </span>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="flex-col">
+                        <div class="btn btn-normal">
+                           <a href="mailto:info@prasiddhaacharya.com.np" class="btn-click magnetic" data-strength="25"
+                              data-strength-text="15">
+                              <div class="btn-fill"></div>
+                              <span class="btn-text">
+                                 <span class="btn-text-inner change">info@prasiddhaacharya.com.np</span>
+                              </span>
+                           </a>
+                        </div>
+                        <div class="btn btn-normal">
+                           <a href="tel:+358449179441" class="btn-click magnetic" data-strength="25"
+                              data-strength-text="15">
+                              <div class="btn-fill"></div>
+                              <span class="btn-text">
+                                 <span class="btn-text-inner change">+358 449179441</span>
+                              </span>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="container no-padding">
+                  <div class="row bottom-footer">
+                     <div class="flex-col">
+                        <div class="credits">
+                           <h5 class="gog">Version</h5>
+                           <p class="gog em" id="editionYear">2025 © Edition</p>
+
+                           <script>
+                              // Get the current year
+                              const currentYear = new Date().getFullYear();
+
+                              // Replace the text inside the element
+                              document.getElementById('editionYear').textContent = `${currentYear} © Edition`;
+                           </script>
+                        </div>
+                        <div class="time">
+                           <h5 class="gog">Inspire</h5>
+                           <p class="gog em"><span>Dream. Design. Develop.</span></p>
+                           <p><span style="display: none;" id="timeSpan"></span></p>
+                        </div>
+                     </div>
+                     <div class="flex-col">
+                        <div class="socials">
+                           <h5>Socials</h5>
+                           <ul>
+                              <li class="btn btn-link btn-link-external">
+                                 <a href="https://www.facebook.com/prasiddhacharya" target="_blank"
+                                    class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                    <span class="btn-text">
+                                       <span class="btn-text-inner">Facebook</span>
+                                    </span>
+                                 </a>
+                              </li>
+                              <li class="btn btn-link btn-link-external">
+                                 <a href="https://www.instagram.com/prasiddha_acharya/" target="_blank"
+                                    class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                    <span class="btn-text">
+                                       <span class="btn-text-inner">Instagram</span>
+                                    </span>
+                                 </a>
+                              </li>
+                              <li class="btn btn-link btn-link-external">
+                                 <a href="https://wa.me/+358449179441" target="_blank" class="btn-click magnetic"
+                                    data-strength="20" data-strength-text="10">
+                                    <span class="btn-text">
+                                       <span class="btn-text-inner">WhatsApp</span>
+                                    </span>
+                                 </a>
+                              </li>
+                              <li class="btn btn-link btn-link-external">
+                                 <a href="https://www.linkedin.com/in/prasiddha-acharya/" target="_blank"
+                                    class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                    <span class="btn-text">
+                                       <span class="btn-text-inner">LinkedIn</span>
+                                    </span>
+                                 </a>
+                              </li>
+                           </ul>
+                           <div class="stripe"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </footer>
+            <div class="overlay overlay-gradient"></div>
+         </div>
+         <style>
+            .block_4 .container {
+               padding: 0;
             }
-        });
 
-        function closeViewer() {
-            $('#image-viewer').fadeOut(100);
-            $(".thumbnail-bar").fadeOut(200);
-        }
-
-        function showImage(direction) {
-            const img = $("#full-image");
-            if (direction) {
-                img.addClass(direction === "left" ? "slide-left" : "slide-right");
-                setTimeout(() => {
-                    img.removeClass("slide-left slide-right");
-                    img.attr("src", images[currentIndex]);
-                    img.css("transform", direction === "left" ? "translateX(100%)" : "translateX(-100%)");
-                    img[0].offsetHeight;
-                    img.css({ transform: "translateX(0)", opacity: 1 });
-                    renderThumbnails();
-                }, 300);
-            } else {
-                img.attr("src", images[currentIndex]);
-                img.css({ transform: "translateX(0)", opacity: 1 });
-                renderThumbnails();
-            }
-        }
-
-        $(document).keydown(function (e) {
-            if ($("#image-viewer").is(":visible")) {
-                if (e.key === "ArrowLeft") {
-                    currentIndex = (currentIndex - 1 + images.length) % images.length;
-                    showImage("right");
-                } else if (e.key === "ArrowRight") {
-                    currentIndex = (currentIndex + 1) % images.length;
-                    showImage("left");
-                } else if (e.key === "Escape") {
-                    closeViewer();
-                }
-            }
-        });
-
-        let startX = 0;
-        $("#image-viewer").on("touchstart", function (e) {
-            startX = e.originalEvent.touches[0].clientX;
-        });
-
-        $("#image-viewer").on("touchend", function (e) {
-            let endX = e.originalEvent.changedTouches[0].clientX;
-            if (startX - endX > 50) {
-                currentIndex = (currentIndex + 1) % images.length;
-                showImage("left");
-            } else if (endX - startX > 50) {
-                currentIndex = (currentIndex - 1 + images.length) % images.length;
-                showImage("right");
-            }
-        });
-
-        function renderThumbnails() {
-            const thumbContainer = $(".thumbnail-bar").empty();
-            images.forEach((src, index) => {
-                const thumb = $("<img>").attr("src", src);
-                if (index === currentIndex) thumb.addClass("active");
-                thumb.click(() => {
-                    currentIndex = index;
-                    showImage();
-                });
-                thumbContainer.append(thumb);
-            });
-        }
-    </script>
-
-</body>
+            @media screen and (max-width: 540px) {}
+         </style>
+         </div>
+      </main>
+      <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.0/js.cookie.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+      <script src="https://unpkg.com/@barba/core"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.6.1/dist/lazyload.min.js"></script>
+      <script src="https://itsamir.com/assets/js/locomotive-scroll.min.js"></script>
+      <script defer src="https://itsamir.com/assets/js/index-new.js"></script>
+      <script src="js/graphic-design.js"></script>
+   </body>
 
 </html>
