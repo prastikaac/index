@@ -43,7 +43,7 @@
 </head>
 
 <body data-barba="wrapper">
-   
+
     <div class="no-scroll-overlay"></div>
     <div class="loading-container">
         <div class="loading-screen">
@@ -95,26 +95,26 @@
     <body data-barba="wrapper">
         <div class="no-scroll-overlay"></div>
         <main class="main" id="contact" data-barba="container" data-barba-namespace="contact">
- <!-- ✅ Popup Modal -->
-    <div id="popup-overlay"></div>
-    <div id="popup-modal">
-        <div class="popup-content">
-            <button id="popup-close" class="popup-close">&times;</button>
-            <img src="assets/images/sent.png" alt="Message Sent" class="popup-image">
-            <p class="popup-text">
-                Thank you for reaching out. Your message has safely landed in my inbox!
-                I’ll read it carefully with a coffee in hand and reply as soon as I can :)
-            </p>
-            <button id="popup-ok" class="popup-button">Mission complete — back home!</button>
+            <!-- ✅ Popup Modal -->
+            <div id="popup-overlay"></div>
+            <div id="popup-modal">
+                <div class="popup-content">
+                    <button id="popup-close" class="popup-close">&times;</button>
+                    <img src="assets/images/sent.png" alt="Message Sent" class="popup-image">
+                    <p class="popup-text">
+                        Thank you for reaching out. Your message has safely landed in my inbox!
+                        I’ll read it carefully with a coffee in hand and reply as soon as I can :)
+                    </p>
+                    <button id="popup-ok" class="popup-button">Mission complete — back home!</button>
 
-            <script>
-                document.getElementById("popup-ok").addEventListener("click", () => {
-                    window.location.href = "../";
-                });
-            </script>
+                    <script>
+                        document.getElementById("popup-ok").addEventListener("click", () => {
+                            window.location.href = "../";
+                        });
+                    </script>
 
-        </div>
-    </div>
+                </div>
+            </div>
             <div class="btn btn-hamburger">
                 <div class="btn-click magnetic" data-strength="50" data-strength-text="25">
                     <div class="btn-fill"></div>
@@ -144,7 +144,7 @@
                                 </a>
                             </li>
                             <li class="btn btn-link ">
-                                <a href="#success" class="btn-click magnetic" data-strength="24"
+                                <a href="work.html" class="btn-click magnetic" data-strength="24"
                                     data-strength-text="12">
                                     <span class="btn-text">
                                         <span class="btn-text-inner">Work</span>
@@ -212,20 +212,18 @@
                 </div>
             </div>
             <div class="main-wrap" data-scroll-container>
-                
+
                 <header class="section default-header contact-header theme-dark" data-scroll-section>
                     <div class="nav-bar">
                         <div class="credits-top">
                             <div class="btn btn-link btn-left-top">
                                 <a href="#" class="btn-click magnetic" data-strength="20" data-strength-text="10">
-                                    <span class="btn-text">
-                                        <div class="credit" style="font-family: sans-serif;"><span>©</span></div>
-                                        <div class="cbd" style="font-size: 15px;"><span class="code-by">Code
-                                                by</span><span class="dennis"><span class="dennis-span">-
-                                                    Prasiddha</span> <span class="snellenberg">&nbsp; &nbsp; &nbsp;
-                                                    &nbsp; &nbsp;
-                                                    Ac</span></span>
-                                    </span>
+                                     <span class="btn-text">
+                              <div class="credit" style="font-family: sans-serif;"><span>©</span></div>
+                              <div class="cbd" style="font-size: 15px;"><span class="code-by">Prasiddha  
+                                    Acharya </span><span class="dennis"><span class="dennis-span">
+                                        — Portfolio</span> <span class="snellenberg">  &nbsp; &nbsp; &nbsp; &nbsp; 2025</span></span>
+                           </span>
                             </div>
                             </span>
                             </a>
@@ -240,7 +238,7 @@
                             </a>
                         </li>
                         <li class="btn btn-link">
-                            <a href="#success" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                            <a href="work.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
                                 <span class="btn-text">
                                     <span class="btn-text-inner">Work</span>
                                 </span>
@@ -597,6 +595,17 @@
                                 display: block;
                             }
 
+
+                              .contact-header .form {
+                                    margin-top: -60px;
+                                }
+
+
+                            /* Responsive */
+                            @media (min-width: 600px) {
+                              
+                            }
+
                             /* Responsive */
                             @media (max-width: 600px) {
                                 #popup-modal {
@@ -605,6 +614,10 @@
 
                                 .popup-text {
                                     font-size: 15px;
+                                }
+
+                                  .contact-header .form {
+                                    margin-top: -30px;
                                 }
 
                                 .popup-button {
@@ -678,7 +691,7 @@
                 </div>
             </div>
             </header>
-            
+
             <footer class="section footer footer-contact theme-dark" data-scroll-section>
                 <div class="container no-padding">
                     <div class="row bottom-footer">
