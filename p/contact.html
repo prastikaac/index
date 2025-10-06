@@ -43,6 +43,26 @@
 </head>
 
 <body data-barba="wrapper">
+    <!-- ✅ Popup Modal -->
+    <div id="popup-overlay"></div>
+    <div id="popup-modal">
+        <div class="popup-content">
+            <button id="popup-close" class="popup-close">&times;</button>
+            <img src="assets/images/sent.png" alt="Message Sent" class="popup-image">
+            <p class="popup-text">
+                Thank you for reaching out. Your message has safely landed in my inbox!
+                I’ll read it carefully with a coffee in hand and reply as soon as I can :)
+            </p>
+            <button id="popup-ok" class="popup-button">Mission complete — back home!</button>
+
+            <script>
+                document.getElementById("popup-ok").addEventListener("click", () => {
+                    window.location.href = "../";
+                });
+            </script>
+
+        </div>
+    </div>
     <div class="no-scroll-overlay"></div>
     <div class="loading-container">
         <div class="loading-screen">
@@ -124,7 +144,7 @@
                                 </a>
                             </li>
                             <li class="btn btn-link ">
-                                <a href="work.html" class="btn-click magnetic" data-strength="24"
+                                <a href="#success" class="btn-click magnetic" data-strength="24"
                                     data-strength-text="12">
                                     <span class="btn-text">
                                         <span class="btn-text-inner">Work</span>
@@ -219,7 +239,7 @@
                             </a>
                         </li>
                         <li class="btn btn-link">
-                            <a href="work.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                            <a href="#success" class="btn-click magnetic" data-strength="20" data-strength-text="10">
                                 <span class="btn-text">
                                     <span class="btn-text-inner">Work</span>
                                 </span>
@@ -288,6 +308,7 @@
                 </div>
                 <div class="row once-in">
                     <div class="flex-col">
+
                         <form id="contact-form" class="form" novalidate>
                             <!-- Hidden fields -->
                             <input type="hidden" id="form-time" name="time">
@@ -338,6 +359,9 @@
                                 </div>
                             </div>
                         </form>
+
+
+
                         <script>
                             document.getElementById('contact-form').addEventListener('submit', function (e) {
                                 e.preventDefault();
@@ -397,43 +421,47 @@
                             function showPopup() {
                                 const overlay = document.getElementById('popup-overlay');
                                 const popup = document.getElementById('popup-modal');
-                                overlay.classList.add('show');
-                                popup.classList.add('show');
 
-                                // Auto close after 3 seconds
+                                overlay.classList.add('show');
+                                popup.classList.add('show', 'slide-up'); // 👈 Add slide-up animation
+                                popup.classList.remove('slide-down');
+
+                                // ✅ Lock body scroll
+                                document.body.style.overflow = 'hidden';
+                                document.body.style.height = '100vh';
+                                document.body.style.touchAction = 'none';
+
+                                // ✅ Scroll smoothly to popup
+                                setTimeout(() => {
+                                    popup.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                }, 100);
+
+                                // Auto close after 3 minutes
                                 setTimeout(hidePopup, 300000);
 
-                                // Manual close
+                                // Manual close via cross
                                 document.getElementById('popup-close').onclick = hidePopup;
                             }
 
                             function hidePopup() {
                                 const overlay = document.getElementById('popup-overlay');
                                 const popup = document.getElementById('popup-modal');
-                                overlay.classList.remove('show');
-                                popup.classList.remove('show');
+
+                                // 👇 Animate going down before hiding
+                                popup.classList.remove('slide-up');
+                                popup.classList.add('slide-down');
+
+                                setTimeout(() => {
+                                    overlay.classList.remove('show');
+                                    popup.classList.remove('show');
+                                }, 300); // Wait for animation to finish
+
+                                // ✅ Restore body scroll
+                                document.body.style.overflow = '';
+                                document.body.style.height = '';
+                                document.body.style.touchAction = '';
                             }
                         </script>
-                        <!-- ✅ Popup Modal -->
-                        <div id="popup-overlay"></div>
-                        <div id="popup-modal">
-                            <div class="popup-content">
-                                <button id="popup-close" class="popup-close">&times;</button>
-                                <img src="assets/images/sent.png" alt="Message Sent" class="popup-image">
-                                <p class="popup-text">
-                                    Thank you for reaching out. Your message has safely landed in my inbox!
-                                    I’ll read it carefully with a coffee in hand and reply as soon as I can :)
-                                </p>
-                                <button id="popup-ok" class="popup-button">Mission complete — back home!</button>
-
-                                <script>
-                                    document.getElementById("popup-ok").addEventListener("click", () => {
-                                        window.location.href = "../";
-                                    });
-                                </script>
-
-                            </div>
-                        </div>
 
                         <style>
                             /* Overlay */
@@ -448,13 +476,18 @@
                                 display: none;
                             }
 
+                            #popup-overlay.show {
+                                opacity: 1;
+                                display: block;
+                            }
+
                             /* Modal */
                             #popup-modal {
                                 position: fixed;
                                 top: 50%;
                                 left: 50%;
                                 transform: translate(-50%, -50%) scale(0.95);
-                                width: 90%;
+                                width: 100%;
                                 max-width: 500px;
                                 background: #313131;
                                 border-radius: 20px;
@@ -465,11 +498,45 @@
                                 transition: all 0.3s ease;
                                 z-index: 9999;
                                 font-family: "Poppins", sans-serif;
+                                display: none;
                             }
 
                             #popup-modal.show {
                                 opacity: 1;
-                                transform: translate(-50%, -50%) scale(1);
+                                display: block;
+                            }
+
+                            /* ✅ Slide Animations */
+                            @keyframes slideUp {
+                                from {
+                                    transform: translate(-50%, 60%) scale(0.95);
+                                    opacity: 0;
+                                }
+
+                                to {
+                                    transform: translate(-50%, -50%) scale(0.95);
+                                    opacity: 1;
+                                }
+                            }
+
+                            @keyframes slideDown {
+                                from {
+                                    transform: translate(-50%, -50%) scale(0.95);
+                                    opacity: 1;
+                                }
+
+                                to {
+                                    transform: translate(-50%, 60%) scale(0.95);
+                                    opacity: 0;
+                                }
+                            }
+
+                            .slide-up {
+                                animation: slideUp 0.3s ease forwards;
+                            }
+
+                            .slide-down {
+                                animation: slideDown 0.3s ease forwards;
                             }
 
                             /* Close Button */
@@ -529,14 +596,9 @@
                                 display: block;
                             }
 
-                            .field.error {
-                                border-color: #ff4d4d;
-                            }
-
-                            /* ✅ Responsive Adjustments */
+                            /* Responsive */
                             @media (max-width: 600px) {
                                 #popup-modal {
-                                    width: 105%;
                                     padding: 30px 20px;
                                 }
 
@@ -544,29 +606,12 @@
                                     font-size: 15px;
                                 }
 
-                                .popup-image {
-                                    margin-bottom: 15px;
-                                }
-
                                 .popup-button {
                                     font-size: 15px;
                                     padding: 10px 20px;
                                 }
                             }
-
-                            @media (max-width: 400px) {
-                                .popup-text {
-                                    font-size: 14px;
-                                }
-
-
-                                .popup-button {
-                                    font-size: 14px;
-                                    padding: 10px 15px;
-                                }
-                            }
                         </style>
-
 
                     </div>
                     <div class="flex-col">
