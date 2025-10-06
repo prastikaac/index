@@ -43,26 +43,7 @@
 </head>
 
 <body data-barba="wrapper">
-    <!-- ✅ Popup Modal -->
-    <div id="popup-overlay"></div>
-    <div id="popup-modal">
-        <div class="popup-content">
-            <button id="popup-close" class="popup-close">&times;</button>
-            <img src="assets/images/sent.png" alt="Message Sent" class="popup-image">
-            <p class="popup-text">
-                Thank you for reaching out. Your message has safely landed in my inbox!
-                I’ll read it carefully with a coffee in hand and reply as soon as I can :)
-            </p>
-            <button id="popup-ok" class="popup-button">Mission complete — back home!</button>
-
-            <script>
-                document.getElementById("popup-ok").addEventListener("click", () => {
-                    window.location.href = "../";
-                });
-            </script>
-
-        </div>
-    </div>
+   
     <div class="no-scroll-overlay"></div>
     <div class="loading-container">
         <div class="loading-screen">
@@ -114,7 +95,26 @@
     <body data-barba="wrapper">
         <div class="no-scroll-overlay"></div>
         <main class="main" id="contact" data-barba="container" data-barba-namespace="contact">
+ <!-- ✅ Popup Modal -->
+    <div id="popup-overlay"></div>
+    <div id="popup-modal">
+        <div class="popup-content">
+            <button id="popup-close" class="popup-close">&times;</button>
+            <img src="assets/images/sent.png" alt="Message Sent" class="popup-image">
+            <p class="popup-text">
+                Thank you for reaching out. Your message has safely landed in my inbox!
+                I’ll read it carefully with a coffee in hand and reply as soon as I can :)
+            </p>
+            <button id="popup-ok" class="popup-button">Mission complete — back home!</button>
 
+            <script>
+                document.getElementById("popup-ok").addEventListener("click", () => {
+                    window.location.href = "../";
+                });
+            </script>
+
+        </div>
+    </div>
             <div class="btn btn-hamburger">
                 <div class="btn-click magnetic" data-strength="50" data-strength-text="25">
                     <div class="btn-fill"></div>
@@ -212,6 +212,7 @@
                 </div>
             </div>
             <div class="main-wrap" data-scroll-container>
+                
                 <header class="section default-header contact-header theme-dark" data-scroll-section>
                     <div class="nav-bar">
                         <div class="credits-top">
@@ -677,6 +678,7 @@
                 </div>
             </div>
             </header>
+            
             <footer class="section footer footer-contact theme-dark" data-scroll-section>
                 <div class="container no-padding">
                     <div class="row bottom-footer">
