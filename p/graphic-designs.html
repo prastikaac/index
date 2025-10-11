@@ -193,11 +193,12 @@
                         <div class="btn btn-link btn-left-top">
                            <a href="#" class="btn-click magnetic" data-strength="20" data-strength-text="10">
                               <span class="btn-text">
-                              <div class="credit" style="font-family: sans-serif;"><span>©</span></div>
-                              <div class="cbd" style="font-size: 15px;"><span class="code-by">Prasiddha  
-                                    Acharya </span><span class="dennis"><span class="dennis-span">
-                                        — Portfolio</span> <span class="snellenberg">  &nbsp; &nbsp; &nbsp; &nbsp; 2025</span></span>
-                           </span>
+                                 <div class="credit" style="font-family: sans-serif;"><span>©</span></div>
+                                 <div class="cbd" style="font-size: 15px;"><span class="code-by">Prasiddha
+                                       Acharya </span><span class="dennis"><span class="dennis-span">
+                                          — Portfolio</span> <span class="snellenberg"> &nbsp; &nbsp; &nbsp; &nbsp;
+                                          2025</span></span>
+                              </span>
                         </div>
                         </span>
                         </a>
@@ -730,15 +731,77 @@
                   /* prevents scrolling on mobile */
                }
 
-               /* Responsive gallery grid */
                .uqimages {
                   display: grid;
-                  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-                  gap: 15px;
-                  padding: 3px;
+                  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                  gap: 13px;
+                  padding-right: 170px;
+                  padding-left: 170px;
                   max-width: 1200px;
                   margin: auto;
                }
+
+               /* For large screens (desktops and wider laptops) */
+               @media (min-width: 1024px) {
+                  .uqimages {
+                     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                     /* Increase grid item size */
+                     padding-right: 170px;
+                     /* Increase padding */
+                     padding-left: 170px;
+                     /* Increase padding */
+                  }
+
+                  .portfolio-title {
+                     font-size: 45px !important;
+                  }
+
+                  .uqframe .text {
+                     font-size: 1rem !important;
+                  }
+               }
+
+               /* For extra large screens (large desktops or ultra-wide monitors) */
+               @media (min-width: 1440px) {
+                  .uqimages {
+                     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                     /* Larger grid items */
+                     padding-right: 250px;
+                     /* Further increase padding */
+                     padding-left: 250px;
+                     /* Further increase padding */
+                  }
+
+
+               }
+
+               /* For smaller tablets and screens between 768px and 1024px */
+               @media (max-width: 1024px) and (min-width: 768px) {
+                  .uqimages {
+                     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                     /* Slightly smaller grid items */
+                     padding-right: 120px;
+                     /* Adjust padding for mid-size screens */
+                     padding-left: 120px;
+                  }
+
+                  .uqframe .text {
+                     font-size: 1rem !important;
+                  }
+               }
+
+               /* For mobile screens */
+               @media (max-width: 767px) {
+                  .uqimages {
+                     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                     /* Small grid items */
+                     padding-right: 50px;
+                     /* Adjust padding for mobile */
+                     padding-left: 50px;
+                  }
+
+               }
+
 
                /* uqframe for each image */
                .uqframe {
@@ -811,6 +874,8 @@
                   margin-top: 70px;
                   margin-bottom: 40px;
                   font-size: 65px;
+                  line-height: 45px !important;
+
                }
 
                .graphicdetails {
@@ -826,7 +891,7 @@
                   }
                }
 
-               
+
                .graphicdetails {
                   margin-bottom: 20px !important;
                }
@@ -940,7 +1005,7 @@
 
                   .uqimages {
                      display: block !important;
-                     padding: 10px !important;
+                     padding: 20px !important;
                   }
 
                   #uq-image-viewer .modal-content {
